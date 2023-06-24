@@ -2,9 +2,7 @@ import React from 'react';
 // import Users from '.Users'
 import {useEffect, useState} from 'react'
 
-function Body() {
-
-    
+function Body() {   
 
   return (
     <>
@@ -20,3 +18,4 @@ function Body() {
   );
 };
 export default Body;
+
