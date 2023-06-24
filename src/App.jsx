@@ -19,7 +19,7 @@ function App() {const [showContactForm, setShowContactForm] = useState(false);
     <>
       <NavBar />
       <Body />
-      <Form/>
+      {/* <Form/> */}
     </>
   );
 }
