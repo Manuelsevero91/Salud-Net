@@ -6,14 +6,14 @@ function NavBar() {
     <>
       <header className= "header">
         <nav>
-          <ul class="nav-links">
+          <ul className="nav-links">
             <li><a href="#home">Inicio</a>
             </li>
             <li><a href="#home">Ingresar</a>
             </li>
           </ul>          
         </nav>
-        <a href="#"class ="btn"><button>Contacto</button></a>
+        <a href="#"className ="btn"><button>Contacto</button></a>
            </header>
     </>
   );
