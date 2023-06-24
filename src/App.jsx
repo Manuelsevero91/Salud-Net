@@ -8,10 +8,15 @@ import Body from "./Componentes/Body";
 import NavBar from "./Componentes/NavBar";
 
 
-function App() {
+function App() {const [showContactForm, setShowContactForm] = useState(false);
+
+  const handleContactClick = () => {
+    setShowContactForm(true);
+  };
+
   return (
     <>
-      <NavBar />
+      <NavBar  showContactForm={showContactForm} handleContactClick={handleContactClick} />
       <Body />
   
     </>
