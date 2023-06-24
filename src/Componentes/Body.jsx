@@ -5,7 +5,7 @@ const Formulario = () => {
     //Estados del formulario//
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
-  const [consulta, setConsulta] = useState('');
+  const [consulta, setConsulta] = useState('');//Hacer una sola varible //
 
   //Manejo de eventos//
   const handleNombreChange = (event) => {
