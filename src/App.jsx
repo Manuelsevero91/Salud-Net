@@ -9,11 +9,14 @@ import NavBar from "./Componentes/NavBar";
 import Form from "./Componentes/Form"
 
 
-function App() {
+function App() {const [showContactForm, setShowContactForm] = useState(false);
+
+  const handleContactClick = () => {
+    setShowContactForm(true);
+  };
+
   return (
     <>
-      
-
       <NavBar />
       <Body />
       <Form/>
