@@ -3,7 +3,7 @@ import React from 'react';
 import {useEffect, useState} from 'react'
 
 function Body() {
-  
+
   const Prof = "https://647a6fb6d2e5b6101db05b10.mockapi.io/users"
 
   const fetchProf = async (url) => {
