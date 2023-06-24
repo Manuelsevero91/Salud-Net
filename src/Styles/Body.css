@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(44, 99, 103);
+  
+    height: 500px;
+  }
+  .nosotros {
+    margin:30px 30px;
+    width: 80em;
+    position: static;
+    background-color: rgb(44, 99, 103);
+    margin-inline:60px;
+    text-align: center;
+    padding: 2%;  
+    }
+    h1{
+      padding-left: 1em;
+      padding-top: 1em;
+      font-size: 6em;
+      color: azure;
+    }
+    h2{
+      font-size:400;
+      font-weight: lighter;   
+    }
+  

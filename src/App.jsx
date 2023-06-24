@@ -1,14 +1,19 @@
-import './App.css'
-import Body from './Componentes/Body'
+import { useState } from "react";
+import "./Styles/App.css";
+import "./Styles/NavBar.css";
+import "./Styles/Body.css";
+
+import Body from "./Componentes/Body.jsx";
+import NavBar from "./Componentes/NavBar.jsx";
+
 
 function App() {
-  
-
   return (
     <>
-     <Body/>
+      <NavBar />
+      <Body />
     </>
-  )
+  );
 }
 
 export default App;

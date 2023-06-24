@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import Users from '.Users'
+import {useEffect, useState} from 'react'
 
 
 const Formulario = () => {
     //Estados del formulario//
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
-  const [consulta, setConsulta] = useState('');//Hacer una sola varible //
+  const [consulta, setConsulta] = useState('');
 
   //Manejo de eventos//
   const handleNombreChange = (event) => {
@@ -31,39 +33,16 @@ const Formulario = () => {
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="nombre">Nombre y Apellido</label>
-        <input
-          type="text"
-          id="nombre"
-          value={nombre}
-          onChange={handleNombreChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={handleEmailChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="consulta">Espacio consulta:</label>
-        <input
-          type="consulta"
-          id="consulta"
-          value={consulta}
-          onChange={handleConsultaChange}
-        />
-      </div>
-
-      <button type="submit">Enviar</button>
-    </form>
+    <div className = "container">
+        <h1>Salud Net</h1>
+    <div className = "nosotros">
+      <h2>Nosotros</h2>     
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>         
+        <button onClick={fetchProf}>Nuestros Profesionales</button>
+    </div>
+    </div>
     </>
   );
 };
+export default Body;
 
-export default Formulario;
