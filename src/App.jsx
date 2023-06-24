@@ -1,12 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './styles/App.css'
-import './styles/NavBar.css'
-import './styles/Body.css'
+import './Styles/App.css'
+import './Styles/NavBar.css'
+import './Styles/Body.css'
 
-import Body from './views/components/Body'
-import NavBar from './views/components/NavBar'
+import Body from './Componentes/Body.jsx'
+import NavBar from './Componentes/NavBar.jsx'
 
 function App() {
  
@@ -14,9 +12,8 @@ function App() {
   return (
     <>    
     <NavBar/>
-    <Body/>
-      {
-      }
+    <Body/>     
+      
     </>
   )
 }
