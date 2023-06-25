@@ -7,7 +7,6 @@ import "./Styles/Footer.css";
 
 import Body from "./Componentes/Body";
 import NavBar from "./Componentes/NavBar";
-import Footer from "./Componentes/Footer";
 
 function App() {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -18,11 +17,9 @@ function App() {
 
   return (
     <>
-      <NavBar />
-      <Body
-        showContactForm={showContactForm}
-        handleContactClick={handleContactClick}/>
-      <Footer />
+      <NavBar  showContactForm={showContactForm} handleContactClick={handleContactClick} />
+      <Body />
+  
     </>
   );
 }
