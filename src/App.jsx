@@ -20,7 +20,8 @@ function App() {
     <>
       <NavBar  showContactForm={showContactForm} handleContactClick={handleContactClick} />
       <Body />
-      <Form/>
+      {/* <Form/> */}
+      <Footer/>
     </>
   );
 }
