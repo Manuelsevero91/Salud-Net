@@ -1,45 +1,31 @@
-.header {
-    background-color: rgb(44, 99, 103);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 15%px;
-    padding: 7px 10%;
-  }
-  .nav-links {
-    list-style: none;
-  
-  }
-  li {
-    display: inline-block;
-    padding: 0px 8px;
-    margin-bottom: 15px;
-     }
-  li:hover {
-    transform: scale(1.1);
-  }
-  a {
-    font-size: 1.3em;
-    text-decoration: none;
-    color: white;
-  
-  }
-  a:hover {
-    color: rgb(218, 192, 104);
-  }
-  button {
-    font-weight: 700;
-    font-size: medium;
-    color: rgb(63, 128, 128);
-    padding: 9px 25px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s;
-    margin-bottom: 7px;
-  }
-  button:hover {
-    background-color: rgb(31, 71, 74);
-    color: rgb(218, 192, 104);
-    transform: scale(1.1);
-  }
+nav {
+  background-color: rgb(44, 99, 103);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+  height: 15%px;
+  padding: 15px 10em;
+  align-content: center;
+}
+.nav-links {
+  list-style: none;
+}
+li {
+  display: inline-block;
+  padding: 10px 18px;
+}
+li:hover {
+  transform: scale(1.1);
+}
+a {
+  font-size: 1.4em;
+  text-decoration: none;
+  color: rgb(227, 206, 44);
+}
+a:hover {
+  color: rgb(218, 192, 104);
+}
+#contact {
+  align-self: center;
+}

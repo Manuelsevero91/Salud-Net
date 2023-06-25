@@ -3,13 +3,14 @@ import "./Styles/App.css";
 import "./Styles/NavBar.css";
 import "./Styles/Body.css";
 import "./Styles/Form.css";
+import "./Styles/Footer.css";
 
 import Body from "./Componentes/Body";
 import NavBar from "./Componentes/NavBar";
-import Form from "./Componentes/Form"
+import Footer from "./Componentes/Footer";
 
-
-function App() {const [showContactForm, setShowContactForm] = useState(false);
+function App() {
+  const [showContactForm, setShowContactForm] = useState(false);
 
   const handleContactClick = () => {
     setShowContactForm(true);
@@ -17,9 +18,9 @@ function App() {const [showContactForm, setShowContactForm] = useState(false);
 
   return (
     <>
-      <NavBar />
+      <NavBar  showContactForm={showContactForm} handleContactClick={handleContactClick} />
       <Body />
-      {/* <Form/> */}
+      <Form/>
     </>
   );
 }
