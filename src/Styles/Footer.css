@@ -1,0 +1,13 @@
+.nosotros {
+    width: 100%;
+    position: static;
+    background-color:rgb(237, 232, 227);
+    text-align: center;
+    padding: 2%; 
+    color: rgb(46, 46, 46); 
+}
+h2 {
+    font-size: 400;
+    font-weight: lighter;
+  }
+  

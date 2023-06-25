@@ -15,21 +15,19 @@ function NavBar() {
 
   return (
     <>
-      <header className="header">
-        <nav>
-          <ul className="nav-links">
-            <li>
-              <a href="#home">Inicio</a>
-            </li>
-            <li>
-              <a href="#home">Ingresar</a>
-            </li>
-          </ul>
-        </nav>
-        <button onClick={handleContactClick}>Contacto</button>
+      <nav>
+        <ul className="nav-links">
+          <li>
+            <a href="#home">Inicio</a>
+          </li>
+          <li>
+            <a href="#home">Ingresar</a>
+          </li>
+        </ul>
 
-        {showContactForm && <Form onSubmit={handleSubmit} />}
-      </header>
+        <button onClick={handleContactClick} id="contact">Contacto</button>
+      </nav>
+      {showContactForm && <Form onSubmit={handleSubmit} />}      
     </>
   );
 }

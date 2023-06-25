@@ -27,9 +27,9 @@ const Formulario = () => {
     console.log("Email:", email);
     console.log("Consulta:", consulta);
     // Reiniciar los valores de los campos y establecer el estado de enviado a true
-    setNombre('');
-    setEmail('');
-    setConsulta('');
+    setNombre("");
+    setEmail("");
+    setConsulta("");
     setEnviado(true);
   };
 
@@ -40,38 +40,39 @@ const Formulario = () => {
 
   return (
     <>
-    <div id="containerForm">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="nombre">Nombre y Apellido</label>
-          <input
-            type="text"
-            id="nombre"
-            value={nombre}
-            onChange={handleNombreChange}
-          />
+      <div className="form-overlay">
+        <div className="form-container">
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="nombre">Nombre y Apellido</label>
+              <input
+                type="text"
+                id="nombre"
+                value={nombre}
+                onChange={handleNombreChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="consulta">Espacio consulta:</label>
+              <input
+                type="text"
+                id="consulta"
+                value={consulta}
+                onChange={handleConsultaChange}
+              />
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="consulta">Espacio consulta:</label>
-          <input
-            type="text"
-            id="consulta"
-            value={consulta}
-            onChange={handleConsultaChange}
-          />
-        </div>
-
-        <button type="submit">Enviar</button>
-      </form>
       </div>
     </>
   );
