@@ -18,10 +18,10 @@ function App() {
 
   return (
     <>
-      <NavBar  showContactForm={showContactForm} handleContactClick={handleContactClick} />
+      <NavBar showContactForm={showContactForm} handleContactClick={handleContactClick} />
       <Body />
-      <Footer/>
-  
+      <Footer />
+
     </>
   );
 }
