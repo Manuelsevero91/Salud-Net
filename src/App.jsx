@@ -8,6 +8,7 @@ import NavBar from "./Componentes/NavBar";
 import Footer from "./Componentes/Footer";
 import { Routes, Route } from 'react-router-dom';
 import {useState} from 'react'
+import Form from "./Componentes/Form";
 
 function App() {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -18,11 +19,15 @@ function App() {
 
   return (
     <>
+    <NavBar/>
     <Routes>
-      <Route exact path = "/" element = {<NavBar/>} showContactForm={showContactForm} handleContactClick={handleContactClick}/>
+      {/* <Route exact path = "/" element = {<Header/>} showContactForm={showContactForm} handleContactClick={handleContactClick}/> */}
       <Route exact path="/" element = {<Body/>} />
-      <Route exact path="/" element = {<Footer/>} />
+      {/* <Route exact path="/" element = {<Footer/>} /> */}
+      <Route exact path="/" element = {<Form/>} />
       </Routes>
+      <Footer/>
+      
     </>
   );
 }
