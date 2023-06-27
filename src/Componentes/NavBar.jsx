@@ -29,6 +29,7 @@ function NavBar() {
       </nav>
       {showContactForm && <Form onSubmit={handleSubmit} />}      
     </>
+    
   );
 }
 export default NavBar;
