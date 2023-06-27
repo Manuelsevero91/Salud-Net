@@ -1,7 +1,9 @@
 import React from "react";
 import Form from "./Form";
-import { useState } from "react";
-import "../Styles/Form.css";
+import {useState } from "react";
+// import "../Styles/Form.css";
+import { Link } from 'react-router-dom'
+
 
 function NavBar() {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -15,19 +17,17 @@ function NavBar() {
 
   return (
     <>
+    <div>
       <nav>
         <ul className="nav-links">
-          <li>
-            <a href="#home">Inicio</a>
-          </li>
-          <li>
-            <a href="#home">Ingresar</a>
-          </li>
+          <li><Link to="/inicio">Inicio</Link></li>
+          <li><Link to="/ingresar">Ingresar</Link></li>
         </ul>
 
         <button onClick={handleContactClick} id="contact">Contacto</button>
       </nav>
-      {showContactForm && <Form onSubmit={handleSubmit} />}      
+      {showContactForm && <Form onSubmit={handleSubmit} />}
+      </div>
     </>
     
   );
