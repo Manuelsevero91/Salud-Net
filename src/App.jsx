@@ -9,6 +9,7 @@ import Footer from "./Componentes/Footer";
 import { Routes, Route } from 'react-router-dom';
 import {useState} from 'react'
 import Form from "./Componentes/Form";
+import Login from "./Componentes/Login";
 
 function App() {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -25,6 +26,7 @@ function App() {
       <Route exact path="/" element = {<Body/>} />
       {/* <Route exact path="/" element = {<Footer/>} /> */}
       <Route exact path="/" element = {<Form/>} />
+      <Route exact path="/" element = {<Login/>} />
       </Routes>
       <Footer/>
       
