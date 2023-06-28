@@ -3,6 +3,7 @@ import "./Styles/NavBar.css";
 import "./Styles/Body.css";
 import "./Styles/Form.css";
 import "./Styles/Footer.css";
+import './Styles/Index.css'
 import Home from "./Componentes/Home";
 import NavBar from "./Componentes/NavBar";
 import { Routes, Route } from 'react-router-dom';

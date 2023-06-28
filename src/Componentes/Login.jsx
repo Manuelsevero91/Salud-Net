@@ -3,6 +3,8 @@ import { useState , useEffect, useRef} from 'react'
 import Menu from './Menu.jsx'
 import error404Image from "./eror-404.jpg"
 
+
+
 function Login() {
 
  const urlBase = "https://647a6fb6d2e5b6101db05b10.mockapi.io/users"
@@ -26,12 +28,12 @@ fetch(urlBase)
 .catch((err)=> setError(true));
 
   },[]);
-//   if(!users.length && !error)return <BeatLoader/>; 
-//   if(error) {
-//     return (
-//     <div className='error-container'>
-//       <img src= {error404Image} alt= "Error 404"/> 
-//       </div>)}//imagen de error, hace falta buscarle la vuelta para que tape al body (tiene la imagen del consultorio)
+  // if(!users.length && !error)return <BeatLoader/>; 
+  // if(error) {
+  //   return (
+  //   <div className='error-container'>
+  //     <img src= {error404Image} alt= "Error 404"/> 
+  //     </div>)}//imagen de error, hace falta buscarle la vuelta para que tape al body (tiene la imagen del consultorio)
 
   
     function handleSubmit(e) {

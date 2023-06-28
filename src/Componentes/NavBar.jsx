@@ -1,8 +1,8 @@
 import React from "react";
 import {useState } from "react";
-// import "../Styles/Form.css";
 import { Link} from 'react-router-dom'
 import Login from "./Login";
+
 
 
 function NavBar() {
