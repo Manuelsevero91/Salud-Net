@@ -8,7 +8,7 @@ import Home from "./Componentes/Home";
 import NavBar from "./Componentes/NavBar";
 import { Routes, Route } from 'react-router-dom';
 import Login from "./Componentes/Login";
-import Contacto from "./Componentes/Contacto";
+import Contacto from "./Componentes/Contacto"
 
 function App() {
  
@@ -20,7 +20,7 @@ function App() {
       <Route exact path="/contacto" element = {<Contacto/>} />
       <Route exact path="/ingresar" element = {<Login/>} />
       </Routes>
-    
+
 
     </>
   );
