@@ -25,10 +25,9 @@ function App() {
       <Route exact path="/" element = {<Body/>} />
       {/* <Route exact path="/" element = {<Footer/>} /> */}
       <Route exact path="/" element = {<Form/>} />
-      </Routes>
       <Footer/>
-      
-    </>
+      </Routes>
+      </>
   );
 }
 

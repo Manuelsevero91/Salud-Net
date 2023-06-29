@@ -12,7 +12,7 @@ body {
 }
 
 button {
-  color: rgb(227, 206, 44);
+  color: rgb(246, 244, 228);
   border: none;
   padding: auto;
   font-size: 1.4em;
@@ -22,7 +22,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  color: #efeee9;
+  color: rgb(227, 206, 44);
   transform: scale(1.1);
 }
 
@@ -31,7 +31,7 @@ button:hover {
     background-color: #ffffff;
   }
   a:hover {
-    color: #efeee9;
+    color: #d7c671;
   }
   button {
     background-color: rgb(44, 99, 103);

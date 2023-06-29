@@ -15,20 +15,18 @@ nav {
 li {
   display: inline;
   padding: 30px;
- align-content: center;
-
+  align-content: center;
 }
 li:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 a {
-  font-size: 1.4em;  
+  font-size: 1.4em;
   text-decoration: none;
-  color: rgb(227, 206, 44);
-
+  color: rgb(243, 242, 234);
 }
 a:hover {
-  color: rgb(218, 192, 104);
+  color: rgb(239, 195, 74);  
 }
 #contact {
   align-self: center;
