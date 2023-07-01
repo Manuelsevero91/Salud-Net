@@ -4,12 +4,6 @@ import Menu from '../Componentes/Menu.jsx';
 
 function Login({handleLogin}) {
   const urlBase ="https://647a6fb6d2e5b6101db05b10.mockapi.io/users";
-  // const navigate = useNavigate();
-
-  // const handleLogin = () => {
-  //   // Lógica de inicio de sesión aquí
-  //   navigate('/');
-  // };
 
   const [ingresar, setIngresar] = useState(false);
   const [users, setUsers] = useState([]);
