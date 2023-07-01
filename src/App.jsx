@@ -11,6 +11,7 @@ import { Routes, Route } from 'react-router-dom';
 import Login from "./Pages/Login";
 import Contacto from "./Pages/Contacto"
 import {useState} from 'react'
+import Users from "./Pages/Users"
 
 
 function App() {
@@ -19,11 +20,9 @@ function App() {
     setIsLoggedIn(true);
 
   };
-
   const handleLogout = () => {
     setIsLoggedIn(false);
   };
-
 
   return (
 
@@ -33,6 +32,7 @@ function App() {
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
         <Route exact path="/contacto" element={<Contacto />} />
         <Route path="/ingresar" element={<Login handleLogin={handleLogin} />} />
+        <Route path="/profesionales" element={<Users/>} />
     </Routes>
 
 
