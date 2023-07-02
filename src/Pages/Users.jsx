@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-// import logoSaludNet from './assets/logosaludnet.png'
+// import logoSN from '../assets/logosaludnet.png'
+import NavBar from '../Componentes/NavBar';
 
 function Profesionales() {
   const [users, setUsers] = useState([]);
@@ -11,6 +12,9 @@ function Profesionales() {
     Especialidad: "",
     Matricula: ""
   });
+
+  const [search, setSearch] = useState("");
+  const [searchBy, setSearchBy] = useState("");
 
   const baseUrl = "https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
  
@@ -169,11 +173,43 @@ function Profesionales() {
       .catch(err => console.error(err));
   }
 }
+
+// funcion de busqueda
+function handleSearchBar(e){
+  setSearch(e.target.value);
+}
+
+//funcion de busqueda por nombre o especialidad
+function handleSearchBy(e) {
+  setSearchBy(e.target.value);
+}
+
+
+const usuarioFiltrado = users.filter(user=> {
+  if (searchBy === "nombre"){
+    return user.Name.toLowerCase().includes(search.toLocaleLowerCase())
+  } else if (searchBy === "especialidad"){
+    return user.Especialidad.toLowerCase().includes(search.toLocaleLowerCase())
+  }
+  return true;
+});
   
   return (
     <>
     <div className='logo'>
-      {/* <img src={logoSaludNet} alt="Logo de SaludNet" /> */}
+      {/* <img src={logoSN} alt="Logo de SaludNet" /> */}
+      <p>Seleccione si desea buscar por nombre o especialidad</p>
+
+      <select value={searchBy} onChange={handleSearchBy} className="selector">
+        <option value="nombre">Nombre</option>
+        <option value="especialidad">Especialidad</option>
+      </select>
+      <input
+        type="text"
+        placeholder="Buscar..."
+        onChange={handleSearchBar}
+        value={search} 
+        className="selector"/>
     </div>
     <p className="titulo">PROFESIONALES DE SALUDNET </p>
       <button onClick={openModal} className="controles">Agregar Profesional</button>
@@ -188,6 +224,7 @@ function Profesionales() {
           </tr>
         </thead>
         <tbody>
+        {}
           {users.map(user => (
             <tr key={user.id}>
               <td>{user.id}</td>

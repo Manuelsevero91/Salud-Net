@@ -5,7 +5,7 @@
   color: #535bf2;
 }
 
-body {
+body.incio{
   margin: 0;
   display: flex;
   place-items: center;

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Menu from '../Componentes/Menu.jsx';
 import {BeatLoader} from 'react-spinners'
 import Swal from 'sweetalert2'
-import logoSN from '../Componentes/logosaludnet.png'
+import logoSN from '../assets/logosaludnet.png'
 
 function Login({handleLogin}) {
   const urlBase ="https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
@@ -92,6 +92,7 @@ function handleSubmit(e) {
 
   return (
     <>
+    <body class= 'login'>
       <form ref={notificacionRef} onSubmit={handleSubmit}>
         <h2><strong>Iniciar Sesión</strong></h2>
         <label htmlFor="nombre"><strong>Usuario</strong></label>
@@ -106,6 +107,7 @@ function handleSubmit(e) {
         <button type="submit">Enviar</button>
       </form>
       {ingresar && <Menu name={loginUser.name} />}
+      </body>
     </>
   );
 }
