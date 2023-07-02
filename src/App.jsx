@@ -3,7 +3,8 @@ import "./Styles/NavBar.css";
 import "./Styles/Body.css";
 import "./Styles/Form.css";
 import './Styles/index.css';
-// import './Styles/Login.css';
+import './Styles/Login.css';
+import './Styles/Users.css'
 // import './Styles/Login1.css';
 import Home from "./Pages/Home";
 import NavBar from "./Componentes/NavBar";

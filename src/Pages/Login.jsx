@@ -1,15 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Menu from '../Componentes/Menu.jsx';
-// import { useNavigate } from 'react-router-dom';
+import {BeatLoader} from 'react-spinners'
+import Swal from 'sweetalert2'
+import logoSN from '../Componentes/logosaludnet.png'
 
 function Login({handleLogin}) {
-  const urlBase ="https://647a6fb6d2e5b6101db05b10.mockapi.io/users";
+  const urlBase ="https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
 
   const [ingresar, setIngresar] = useState(false);
   const [users, setUsers] = useState([]);
   const [loginUser, setLoginUser] = useState(null);
   const [error, setError] = useState(false);
   const notificacionRef = useRef(null);
+  const nombreRef = useRef(null);
 
   useEffect(() => {
     fetch(urlBase)
@@ -20,55 +23,83 @@ function Login({handleLogin}) {
       .then((resOk) => {
         setTimeout(() => {
           setUsers((prev) => (prev = resOk));
-        }, 2000);
+          // nombreRef.current.focus()
+        }, 1000);
       })
       .catch((err) => setError(true));
   }, []);
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  if(!users.length && !error)return <BeatLoader/>; 
+  if(error) {
+    return (
+    <div className='error-container'>
+      <img src= {error404Image} alt= "Error 404"/> 
+      </div>)}
 
-    const enteredUsername = e.target.nombre.value;
+function handleSubmit(e) {
+  e.preventDefault();
 
-    const userExists = users.some((user) => user.name === enteredUsername);
+  const enteredUsername = e.target.nombre.value;
+  const userExists = users.some(user => user.Name === enteredUsername); // corrobora si existe el nombre (some)
 
-    if (!userExists) {
-      alert('Usuario no encontrado');
-      setIngresar(false);
-      setLoginUser(null);
-      return;
-    }
-    const userFound = users.find((user) => user.name === enteredUsername);
-
-    if (userFound.id === e.target.password.value) {
-      setIngresar(true);
-      setLoginUser(userFound);
-      notificacionRef.current.style.display = 'none';
-      handleLogin(); 
-    } else {
-      alert('Usuario y/o contraseña incorrecta');
-      setIngresar(false);
-      setLoginUser(null);
-    }
-
-    e.target.reset();
+  if (!userExists) {
+    Swal.fire({
+      imageUrl: logoSN ,
+      imageHeight: 250,
+      imageWidth: 250,
+      // imageAlert: "Logo de Salud Net",
+      html: `<p>El usuario <b>${e.target.nombre.value}</b> no existe en la base de datos </p> `,
+      timer: 3000,
+      icon:"error",
+    })
+    setIngresar(false);
+    setLoginUser(null);
+    return
   }
+   const userFound = users.find(user => user.Name === enteredUsername);
+
+  if (userFound.Password === e.target.password.value) {
+    Swal.fire({
+      imageUrl: logoSN ,
+      imageHeight: 250,
+      imageWidth: 250,
+      // imageAlert: "Logo de Salud Net",
+      html: `<p>Bienvenido <b>${e.target.nombre.value}</b> a nuestro sitio.</p> `,
+      timer: 3000,
+      icon:"sucess",
+     
+    })
+    handleLogin();
+
+    setIngresar(true);
+    setLoginUser(userFound);
+    notificacionRef.current.style.display = "none"; // si es correcto se oculta y deja que se visualice Menu
+  } else {
+    setIngresar(false);
+    setLoginUser(null);
+    Swal.fire({
+      imageUrl: logoSN ,
+      imageHeight: 250,
+      imageWidth: 250,
+      // imageAlert: "Logo de Salud Net",
+      html: `<p>La <b>CONTRASEÑA</b> ingresada no es correcta, vuelva a intentarlo </p> `,
+      timer: 3000,
+      icon:"error",
+    })
+  }
+  e.target.reset();
+}
 
   return (
     <>
       <form ref={notificacionRef} onSubmit={handleSubmit}>
-        <h2>
-          <strong>Iniciar Sesión</strong>
-        </h2>
-        <label htmlFor="nombre">
-          <strong>Usuario</strong>
-        </label>
-        <input type="text" name="nombre" id="nombre" style={{ display: 'block' }} />
-
-        <label htmlFor="password">
-          <strong>Contraseña</strong>
-        </label>
-        <input type="password" name="password" id="password" style={{ display: 'block' }} />
+        <h2><strong>Iniciar Sesión</strong></h2>
+        <label htmlFor="nombre"><strong>Usuario</strong></label>
+        {/* <input type="text" name="nombre" id="nombre" style={{ display: 'block' }} /> */}
+        <input ref={nombreRef} type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" style={{display:'block'}} />
+  
+        <label htmlFor="password"><strong>Contraseña</strong></label>
+        <input type="password" name="password" id="password" placeholder="Introduzca su contraseña" style={{display:'block'}}/>
 
         <p id="notificacion" ref={notificacionRef}></p>
 
@@ -80,3 +111,5 @@ function Login({handleLogin}) {
 }
 
 export default Login;
+
+
