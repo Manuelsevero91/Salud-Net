@@ -1,27 +1,39 @@
 import "./Styles/App.css";
 import "./Styles/NavBar.css";
-
-import "./Styles/Home.css";
+import "./Styles/Body.css";
 import "./Styles/Form.css";
-;
+import "./Styles/Footer.css";
 import './Styles/Index.css'
 import Home from "./Componentes/Home";
 import NavBar from "./Componentes/NavBar";
 import { Routes, Route } from 'react-router-dom';
-import Login from "./Componentes/Login";
-import Contacto from "./Componentes/Contacto";
+import Login from "./Pages/Login";
+import Contacto from "./Pages/Contacto"
+import {useState} from 'react'
+import Users from "./Pages/Users"
+
 
 function App() {
- 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+
+  };
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
+
     <>
-    <NavBar/>
-    <Routes>
-      <Route exact path="/" element = {<Home/>} />
-      <Route exact path="/contacto" element = {<Contacto/>} />
-      <Route exact path="/ingresar" element = {<Login/>} />
-      </Routes>
-    
+   <NavBar isLoggedIn={isLoggedIn} handleLogout={handleLogout} /> 
+   <Routes>
+        <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
+        <Route exact path="/contacto" element={<Contacto />} />
+        <Route path="/ingresar" element={<Login handleLogin={handleLogin} />} />
+        <Route path="/profesionales" element={<Users/>} />
+    </Routes>
+
 
     </>
   );

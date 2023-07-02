@@ -1,15 +1,13 @@
 import React from "react";
 import {useState } from "react";
 import { Link} from 'react-router-dom'
-import Login from "./Login";
+import Login from "../Pages/Login";
 
 
 
-function NavBar() {
-  const [showLogin, setShowLogin] = useState(false);
-
-  const handleLoginClick = () => {
-    setShowLogin(true);
+function NavBar({ isLoggedIn, handleLogout }) {
+  const handleLogoutClick = () => {
+    handleLogout();
   };
 
 
@@ -18,15 +16,17 @@ function NavBar() {
     <div>
       <nav>
         <ul className="nav-links">
-          <li><Link to="/inicio">Inicio</Link></li>
-          <li><Link to="/ingresar" onclick={handleLoginClick}>Ingresar</Link></li>
+          <li><Link to="/">Inicio</Link></li>
+          {isLoggedIn ? (
+              <li><Link to="/" onClick={handleLogoutClick}>Cerrar sesión</Link></li>
+            ) : (
+          <li><Link to="/ingresar">Ingresar</Link></li>
+          )}
           <li><Link to="/contacto">Contacto</Link></li>
             </ul>
 
       </nav>
       </div>
-      {showLogin && <Login />}
-
     </>
   );
 }
