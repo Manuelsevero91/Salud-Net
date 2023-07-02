@@ -28,7 +28,6 @@ function NavBar() {
       {showLogin && <Login />}
 
     </>
-    
   );
 }
 export default NavBar;

@@ -66,7 +66,7 @@ fetch(urlBase)
       return (
         <>
       <form ref={notificacionRef} onSubmit={handleSubmit} >
-          <h2><strong>Iniciar Sesión</strong></h2>
+          <h2 className="Login"><strong>Iniciar Sesión</strong></h2>
           <label htmlFor="nombre" ><strong>Usuario</strong></label>
           <input type="text" name="nombre" id="nombre" style={{display:'block'}} />
   
@@ -75,7 +75,7 @@ fetch(urlBase)
   
         <p id="notificacion" ref={notificacionRef}>  </p>
   
-          <button type="submit"> Enviar</button>
+          <button type="submit" id="ButtonLogin"> Enviar</button>
       </form>
       {ingresar && <Menu name={loginUser.name}  />}
 

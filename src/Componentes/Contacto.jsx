@@ -17,7 +17,7 @@ function Contacto() {
   };
 
   return (
-    <div>
+    <div className="PageContacto">
       <h2>Contacto</h2>
       {showContactForm && <Form onSubmit={handleSubmit} />}
     </div>
