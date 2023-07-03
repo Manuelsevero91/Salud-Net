@@ -1,40 +1,39 @@
-/* :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #535bf2;
-  } */
-  
-  /* body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-  } */
-  
-  button {
-    color: rgb(227, 206, 44);
-    border: none;
-    padding: auto;
-    font-size: 1.4em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: rgb(44, 99, 103);
-    cursor: pointer;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #535bf2;
+}
+
+body.incio{
+  margin: 0;
+  display: flex;
+  place-items: center;
+}
+
+button {
+  color: rgb(227, 206, 44);
+  border: none;
+  padding: auto;
+  font-size: 1.4em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgb(44, 99, 103);
+  cursor: pointer;
+}
+button:hover {
+  color: #efeee9;
+  transform: scale(1.1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #ffffff;
   }
-  button:hover {
+  a:hover {
     color: #efeee9;
-    transform: scale(1.1);
   }
-  
-  @media (prefers-color-scheme: light) {
-    :root {
-      background-color: #ffffff;
-    }
-    /* a:hover {
-      color: #efe9ea;
-      transform: scale(1.8);
-    } */
-    button {
-      background-color: rgb(44, 99, 103);
-    }
+  button {
+    background-color: rgb(44, 99, 103);
   }
+}

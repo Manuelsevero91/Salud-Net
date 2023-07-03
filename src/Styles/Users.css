@@ -1,0 +1,76 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(44, 99, 135);
+    color: white;
+    padding: 20px;
+    z-index: 9999;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  table {
+    width: 100%;
+    margin: 10px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color:  rgb(44, 99, 250);
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color:  rgb(44, 99, 135);
+    color: white;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 5px solid #ddd;
+  }
+  
+  .controles {
+    padding: 5px 10px;
+    background-color:rgb(44, 99, 250);
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .controles:hover {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(44, 99, 250); 
+    border: 1px solid rgb(44, 99, 250); 
+  }
+  
+  .titulo{
+    font-size:xx-large;
+    color: rgb(44, 99, 135);
+  }
+  
+  .logo img{
+    position: absolute;
+    width: 75px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .selector{
+    padding: 5px 10px;
+    border-color:rgb(44, 99, 250);
+    color: black;
+    cursor: pointer;
+    
+  }
+  
+  .selector:hover {
+    color: rgb(44, 99, 250); 
+    border: 1px solid rgb(44, 99, 250); 
+  }

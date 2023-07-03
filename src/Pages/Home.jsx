@@ -1,36 +1,16 @@
-import React from 'react';
-// import Users from '.Users'
-import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 
 function Home({isLoggedIn}) {
 
-  // const [showProfessionals, setShowProfessionals] = useState(false);
-
-  // const handleFetchProfessionals = () => {
-  //   setShowProfessionals(true);
-
-  // };
-
-  // useEffect(() => {
-  //   setShowProfessionals(false); // Reiniciamos el estado al montar el componente
-  // }, []);
-
   return (
     <>
+    <body class= 'inicio'>
     <div className = "container">
         <h1>Bienvenidos a Salud Net</h1>
         {isLoggedIn && (
-        //   <button onClick={handleFetchProfessionals} id="buttonProf">Nuestros Profesionales</button>
-        // )}
-        // {showProfessionals && (
-        //   <div className="professionals-content">
-        <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>
-            // {/* Aquí puedes mostrar el contenido adicional de profesionales */}
-          // {/* </div> */}
+      
+        <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>   
         )}
-        {/* <button onClick={fetchProf} id="buttonProf">Nuestros Profesionales</button> */}
-
     </div>
     
     <div className="nosotros">
@@ -49,10 +29,8 @@ function Home({isLoggedIn}) {
             Aquí puedes agregar un párrafo adicional sobre nosotros cuando el inicio de sesión es correcto.
           </p>
         )}
-
   </div>
-  
-     
+  </body>
     </>
   );
 };
