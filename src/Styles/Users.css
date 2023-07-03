@@ -21,6 +21,7 @@
     border-collapse: collapse;
     background-color:  rgb(44, 99, 250);
     border: 1px solid #ddd;
+    margin-top: 20px;
   }
   
   th {
@@ -67,7 +68,7 @@
     border-color:rgb(44, 99, 250);
     color: black;
     cursor: pointer;
-    
+    margin-top: 60px;
   }
   
   .selector:hover {
