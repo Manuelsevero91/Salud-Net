@@ -98,7 +98,7 @@ function handleSubmit(e) {
     <>
     <body className= 'login'>
       <form ref={notificacionRef} onSubmit={handleSubmit}>
-        <h1 id="inicioSesion"><strong>Iniciar Sesión</strong></h1>
+        <h3 id="inicioSesion"><strong>Iniciar Sesión</strong></h3>
         <label htmlFor="nombre"><strong>Usuario</strong></label>
         {/* <input type="text" name="nombre" id="nombre" style={{ display: 'block' }} /> */}
         <input ref={nombreRef} type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" style={{display:'block'}} />
@@ -117,5 +117,4 @@ function handleSubmit(e) {
 }
 
 export default Login;
-
 
