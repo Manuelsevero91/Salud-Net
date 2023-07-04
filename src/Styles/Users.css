@@ -25,16 +25,22 @@
   }
   
   th {
-    background-color:  rgb(44, 99, 135);
+    background-color: rgb(44, 99, 103);;
     color: white;
     padding: 8px;
     text-align: left;
+    height: 60px;
+    font-size: larger;
   }
   
   td {
     padding: 15px;
     text-align: left;
     border-bottom: 5px solid #ddd;
+    color: beige;
+    font-size: larger ;
+font-weight:;
+
   }
   
   .controles {
@@ -64,14 +70,23 @@
   }
   
   .selector{
-    padding: 5px 10px;
+    padding: 5px 10px;    
     border-color:rgb(44, 99, 250);
     color: black;
     cursor: pointer;
-    margin-top: 60px;
+    width: 250px;  
+ 
   }
   
   .selector:hover {
     color: rgb(44, 99, 250); 
     border: 1px solid rgb(44, 99, 250); 
+  }
+  .logo{
+    background-color: aqua;
+    display:flex;
+   flex-direction:column;
+   justify-content: center;
+    height: 300px;   
+
   }

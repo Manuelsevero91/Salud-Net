@@ -1,26 +1,27 @@
 .container {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   background-color: rgb(44, 99, 103);
-  height: 480px;
+  height: 600px;
   width: 100%;
-  background-image: url("https://www.cmguanella.com.ar/images/banner.jpg");
+  background-image: url("https://media.istockphoto.com/id/1414924646/es/foto/diagn%C3%B3stico-cardi%C3%B3logo-paciente-resultado-de-la-prueba-card%C3%ADaca-y-anatom%C3%ADa-humana-con-base-de.jpg?s=612x612&w=0&k=20&c=64vyySN4i78FlRLLHw2caNnRf4NPQghskUvMdHdJpNM=");
   background-size: cover;
-  /* background-position: cover; */
+  background-position: cover;
+
 }
 h1 {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  /* transform: translate(-20%); */
-  font-size: 70px;
+  position: relative;
+  top: 50%;
+  left: 15%;
+  right: 25%; 
+  font-size:80px;
   color: rgb(245, 249, 249);
+
 }
 #buttonProf {
   background-color: rgb(44, 99, 103);
   margin-top: 280px;
-  padding:0px;
+  padding: 0px;
 }
 .nosotros {
   display: flex;

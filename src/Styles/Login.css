@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: inherit;
   line-height: 1.5;
   font-weight: 400;
@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
+} */
 
 /* a {
   font-weight: 500;
@@ -44,12 +44,12 @@ input{
 label{
 margin-top: 40px;
   padding: 0;
-  color:#f0c721;
+  color:#0c3441;
 }
 #inicioSesion {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #9e9a9a; 
+  color: rgb(44, 99, 103); 
   margin-top: 20px;
 }
 
@@ -76,13 +76,14 @@ margin-top: 40px;
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
+  }}
   /* a:hover {
     color: #747bff;
   } */
 #enviarLogin {
-    background-color: #6d88c2b4;
-   
+    background-color:  rgb(44, 99, 103);
+   color: white;
+   font-weight:bold;
   }
   #error {
     margin-bottom: 50px;
@@ -104,4 +105,3 @@ height: 100%;
 object-fit: cover;
 }
 
-} 
