@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 
+
 function Home({isLoggedIn}) {
 
   return (
@@ -30,6 +31,7 @@ function Home({isLoggedIn}) {
           </p>
         )}
   </div>
+
   </body>
     </>
   );

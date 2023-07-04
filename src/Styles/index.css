@@ -21,10 +21,12 @@ button {
   font-family: inherit;
   background-color: rgb(44, 99, 103);
   cursor: pointer;
+  margin-top: 5px;
 }
 button:hover {
   color: #efeee9;
-  transform: scale(2.2);
+  transform: scale(1.2);
+
 }
 
 @media (prefers-color-scheme: light) {
