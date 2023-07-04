@@ -92,9 +92,9 @@ function handleSubmit(e) {
 
   return (
     <>
-    <body class= 'login'>
+    <body className= 'login'>
       <form ref={notificacionRef} onSubmit={handleSubmit}>
-        <h2><strong>Iniciar Sesión</strong></h2>
+        <h1 id="inicioSesion"><strong>Iniciar Sesión</strong></h1>
         <label htmlFor="nombre"><strong>Usuario</strong></label>
         {/* <input type="text" name="nombre" id="nombre" style={{ display: 'block' }} /> */}
         <input ref={nombreRef} type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" style={{display:'block'}} />
@@ -104,7 +104,7 @@ function handleSubmit(e) {
 
         <p id="notificacion" ref={notificacionRef}></p>
 
-        <button type="submit">Enviar</button>
+        <button id="enviarLogin" type="submit">Enviar</button>
       </form>
       {ingresar && <Menu name={loginUser.name} />}
       </body>

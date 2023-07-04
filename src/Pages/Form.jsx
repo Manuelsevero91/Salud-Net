@@ -29,26 +29,9 @@ const Formulario = () => {
     setConsulta("");
     setEnviado(true);
   };
-
   const handleClose = () => {
     setCerrado(true);
   };
-
-  if (enviado) {
-    return (
-      <>
-        <div className="form-overlay">
-          <div className="form-container">
-            <p>Formulario enviado correctamente.</p>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  if (cerrado) {
-    return null;
-  }
 
   return (
     <>
@@ -91,6 +74,23 @@ const Formulario = () => {
       </div>
     </>
   );
+ 
+
+  if (enviado) {
+    return (
+      <>
+        <div className="form-overlay">
+          <div className="form-container">
+            <p>Formulario enviado correctamente.</p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  if (cerrado) {
+    return null;
+  }
 };
 
 export default Formulario;

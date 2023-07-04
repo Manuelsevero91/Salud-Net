@@ -1,14 +1,15 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #535bf2;
-}
+} */
 
 body.incio{
   margin: 0;
   display: flex;
   place-items: center;
+  width: 100%;
 }
 
 button {
@@ -23,7 +24,7 @@ button {
 }
 button:hover {
   color: #efeee9;
-  transform: scale(1.1);
+  transform: scale(2.2);
 }
 
 @media (prefers-color-scheme: light) {
@@ -33,7 +34,5 @@ button:hover {
   a:hover {
     color: #efeee9;
   }
-  button {
-    background-color: rgb(44, 99, 103);
-  }
+  
 }
