@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-// import logoSN from '../assets/logosaludnet.png'
-import NavBar from '../Componentes/NavBar';
 
 function Profesionales() {
   const [users, setUsers] = useState([]);

@@ -7,6 +7,7 @@ const Formulario = () => {
   const [enviado, setEnviado] = useState(false);
   const [cerrado, setCerrado] = useState(false);
 
+
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
   };
@@ -26,18 +27,30 @@ const Formulario = () => {
     console.log("Consulta:", consulta);
     setEnviado(true);
   };
-
   const handleClose = () => {
     setCerrado(true);
   };
 
+  if (cerrado) {
+    return null;
+  }
+
+
+  if (enviado) {
     return (
+      <div className="form-overlay">
+        <div className="form-container">
+          <p>Formulario enviado correctamente.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
     <div className="form-overlay">
       <div className="form-container">
-        <button onClick={handleClose} className="close-button">
-          X
-        </button>
         <form onSubmit={handleSubmit}>
+        <button onClick={handleClose} className="close-button">X</button>
           <div>
             <label htmlFor="nombre">Nombre y Apellido</label>
             <input
@@ -70,22 +83,6 @@ const Formulario = () => {
       </div>
     </div>
   );
-
-if (enviado) {
-  return (
-    <div className="form-overlay">
-      <div className="form-container">
-        <p>Formulario enviado correctamente.</p>
-        <button onClick={handleClose} className="close-button">
-          X
-        </button>
-      </div>
-    </div>
-  );
-}
-
-if (cerrado) {
-  return null;
-}
 };
+
 export default Formulario;
