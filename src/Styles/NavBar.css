@@ -1,35 +1,41 @@
 nav {
   background-color: rgb(44, 99, 103);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  align-items: flex-end;
-  height: 8%;
-  padding: 7.5px 60px;
-  align-content: center;
-  position: fixed;
+  height: 12%;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0 20px;
+  
 }
-.nav-links {
+
+img {
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+ul.nav-links {
   list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
 }
 li {
-  display: inline;
-  padding: 30px;
- align-content: center;
-
+  padding: 0 10px;
 }
 li:hover {
   transform: scale(1.1);
 }
 a {
-  font-size: 1.4em;  
+  font-size: 1.4em;
   text-decoration: none;
   color: rgb(227, 206, 44);
-
-}
-a:hover {
-  color: rgb(218, 192, 104);
 }
 #contact {
-  align-self: center;
+  margin-left: auto;
 }

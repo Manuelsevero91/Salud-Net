@@ -1,5 +1,5 @@
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: inherit;
     line-height: 1.5;
     font-weight: 400;
   
@@ -14,14 +14,14 @@
     -webkit-text-size-adjust: 100%;
   }
   
-  a {
+  /* a {
     font-weight: 500;
     color: #646cff;
     text-decoration: inherit;
   }
   a:hover {
     color: #535bf2;
-  }
+  } */
   
   body.login{
     margin: 0;
@@ -37,12 +37,12 @@
     background-position: center center
   }
   
-  h1 {
+#inicioSesion {
     font-size: 3.2em;
     line-height: 1.1;
   }
   
-  button {
+  #enviarLogin{
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
@@ -53,11 +53,11 @@
     cursor: pointer;
     transition: border-color 0.25s;
   }
-  button:hover {
+#enviarLogin:hover {
     border-color: #646cff;
   }
-  button:focus,
-  button:focus-visible {
+  #enviarLogin:focus,
+  #enviarLogin:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
   
@@ -66,10 +66,10 @@
       color: #213547;
       background-color: #ffffff;
     }
-    a:hover {
+    /* a:hover {
       color: #747bff;
-    }
-    button {
+    } */
+  #enviarLogin {
       background-color: #6d88c2b4;
      
     }
@@ -93,4 +93,5 @@
   object-fit: cover;
   }
   
-  }
+  } 
+  

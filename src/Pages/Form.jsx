@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
 const Formulario = () => {
-  //Estados del formulario//
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [consulta, setConsulta] = useState("");
   const [enviado, setEnviado] = useState(false);
+  const [cerrado, setCerrado] = useState(false);
 
-  //Manejo de eventos//
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
   };
@@ -22,26 +21,25 @@ const Formulario = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Mostrar datos en consola//
     console.log("Nombre:", nombre);
     console.log("Email:", email);
     console.log("Consulta:", consulta);
-    // Reiniciar los valores de los campos y establecer el estado de enviado a true
     setNombre("");
     setEmail("");
     setConsulta("");
     setEnviado(true);
   };
-
-  // Verificar si el formulario ha sido enviado y mostrar un mensaje de éxito
-  if (enviado) {
-    return <p>Formulario enviado correctamente.</p>;
-  }
+  const handleClose = () => {
+    setCerrado(true);
+  };
 
   return (
     <>
       <div className="form-overlay">
         <div className="form-container">
+          <button onClick={handleClose} className="close-button">
+            X
+          </button>
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="nombre">Nombre y Apellido</label>
@@ -76,6 +74,23 @@ const Formulario = () => {
       </div>
     </>
   );
+ 
+
+  if (enviado) {
+    return (
+      <>
+        <div className="form-overlay">
+          <div className="form-container">
+            <p>Formulario enviado correctamente.</p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  if (cerrado) {
+    return null;
+  }
 };
 
 export default Formulario;
