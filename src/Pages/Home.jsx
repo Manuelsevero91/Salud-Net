@@ -1,17 +1,18 @@
 import {Link} from 'react-router-dom'
-
+import Marketing from '../Componentes/Marketing'
 
 function Home({isLoggedIn}) {
 
   return (
     <>
-    <body class= 'inicio'>
+     <body class= 'inicio'>
     <div className = "container">
-        <h1>Bienvenidos a Salud Net</h1>
-        {isLoggedIn && (
-      
+        {/* <h1>Bienvenidos a Salud Net</h1> */}
+        {!isLoggedIn && <h1>Bienvenidos a Salud Net</h1>}
+        {/* {isLoggedIn && (
         <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>   
-        )}
+        )}  */}
+        {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}
     </div>
     
     <div className="nosotros">
@@ -31,7 +32,7 @@ function Home({isLoggedIn}) {
           </p>
         )}
   </div>
-
+  <Marketing />
   </body>
     </>
   );

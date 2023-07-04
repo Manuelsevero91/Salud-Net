@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function Profesionales() {
   const tablaRef = useRef(null);
@@ -14,7 +14,6 @@ function Profesionales() {
   const [searchBy, setSearchBy] = useState("");
   const [columnaOrden, setColumnaOrden] = useState('');
   const [direccionOrden, setDireccionOrden] = useState('');
-
 
 
   const baseUrl = "https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
@@ -89,8 +88,7 @@ function Profesionales() {
     const updatedUsers = users.filter(user => user.id !== id);
     setUsers(updatedUsers);
   }
-}
-
+  }
   //funcion para editar un profesional
   function handleEditar(id) {
     const userToEdit = users.find(user => user.id === id);
@@ -199,7 +197,6 @@ const usuarioFiltrado = users.filter(user=> {
   return true;
 });
 
-//funcion para ordenar
 function handleOrdenarColumna (columna){
   if (columnaOrden === columna){
     //si la columna de orden es la isma, cambia la direccion
@@ -237,6 +234,7 @@ function ordenarDatos(){
   return datosOrdenados;
 }
 
+  
   return (
     <>
     <div className='logo'>
@@ -271,13 +269,16 @@ function ordenarDatos(){
             {columnaOrden === 'Especialidad' && (
                 direccionOrden === 'ascendente' ? '▲' : '▼'
                )}</th>
+            {/* <th>ID</th>
+            <th>Nombre</th>
+            <th>Especialidad</th> */}
             <th>Matricula</th>
             <th>Controles</th>
           </tr>
         </thead>
         <tbody>
-          {ordenarDatos().map(user => (
-            <tr key={user.id}>
+         {ordenarDatos().map(user => (
+              <tr key={user.id}>
               <td>{user.id}</td>
               <td>{user.Name}</td>
               <td>{user.Especialidad}</td>
