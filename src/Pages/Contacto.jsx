@@ -21,6 +21,7 @@ function Contacto() {
       <h2>Contacto</h2>
       {showContactForm && <Form onSubmit={handleSubmit} />}
     </div>
+   
   );
 }
 

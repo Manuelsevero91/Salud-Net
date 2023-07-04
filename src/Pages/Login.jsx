@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Menu from '../Componentes/Menu.jsx';
+// import Menu from '../Componentes/Menu.jsx';
 import {BeatLoader} from 'react-spinners'
 import Swal from 'sweetalert2'
 import logoSN from '../assets/logosaludnet.png'
+import { useNavigate } from 'react-router-dom';
+
 
 function Login({handleLogin}) {
+  const navigate = useNavigate();
   const urlBase ="https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
 
   const [ingresar, setIngresar] = useState(false);
@@ -70,6 +73,7 @@ function handleSubmit(e) {
      
     })
     handleLogin();
+    navigate('/');
 
     setIngresar(true);
     setLoginUser(userFound);

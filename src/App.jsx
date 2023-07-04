@@ -32,8 +32,8 @@ function App() {
   };
 
   return (
-
     <>
+    
    <NavBar isLoggedIn={isLoggedIn} handleLogout={handleLogout} /> 
 
    <Routes>
