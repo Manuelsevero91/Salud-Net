@@ -15,6 +15,9 @@ function Profesionales() {
 
   const [search, setSearch] = useState("");
   const [searchBy, setSearchBy] = useState("");
+  const [columnaOrden, setColumnaOrden] = useState('');
+  const [direccionOrden, setDireccionOrden] = useState('');
+
 
   const baseUrl = "https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
  
@@ -74,7 +77,9 @@ function Profesionales() {
   }
 
   //funcion para eliminar un profesional
-  function handleDelete(id) {
+  function handleDelete(id, userName) {
+    const confirmacion = window.confirm(`¿Esta seguro que desea eliminar al profesional ${userName} ?`);
+    if (confirmacion){
     fetch(baseUrl + `/${id}`, {
       method: "DELETE",
     })
@@ -85,7 +90,7 @@ function Profesionales() {
     const updatedUsers = users.filter(user => user.id !== id);
     setUsers(updatedUsers);
   }
-
+  }
   //funcion para editar un profesional
   function handleEditar(id) {
     const userToEdit = users.find(user => user.id === id);
@@ -193,6 +198,44 @@ const usuarioFiltrado = users.filter(user=> {
   }
   return true;
 });
+
+function handleOrdenarColumna (columna){
+  if (columnaOrden === columna){
+    //si la columna de orden es la isma, cambia la direccion
+    setDireccionOrden(direccionOrden === 'ascendente' ? 'descendente' : 'ascendente');
+  } else{
+    // Si la columna de orden es diferente, establece la nueva columna y la dirección ascendente
+    setColumnaOrden(columna);
+    setDireccionOrden('ascendente');
+  }
+}
+
+//funcion para el ordenamiento de datos segun que columna se seleccione
+function ordenarDatos(){
+  let datosOrdenados = [...usuarioFiltrado];
+  datosOrdenados.sort ((a, b) => {
+    if(columnaOrden === 'id') {
+      const idA = Number(a[columnaOrden]);
+      const idB = Number(b[columnaOrden]);
+      if (idA < idB) {
+        return direccionOrden === 'ascendente' ? -1 : 1; //orden ascendente de numeros
+      }
+      if (idA > idB) {
+        return direccionOrden === 'ascendente' ? 1 : -1; //orden descendente de numeros
+    }
+  } else{
+    if(a[columnaOrden] < b[columnaOrden]){
+      return direccionOrden === "ascendente" ? -1 : 1; //a viene antes que b
+    }
+    if (a[columnaOrden] > b[columnaOrden]) {
+      return direccionOrden === 'ascendente' ? 1 : -1; // b viene antes que a
+    }
+  }
+    return 0;
+  });
+  return datosOrdenados;
+}
+
   
   return (
     <>
@@ -216,17 +259,29 @@ const usuarioFiltrado = users.filter(user=> {
       <table ref={tablaRef} className="table">
         <thead>
           <tr>
-            <th>ID</th>
+          <th onClick={() => handleOrdenarColumna('id')}>
+            ID {columnaOrden === 'id' && (
+                direccionOrden === 'ascendente' ? '▲' : '▼'
+               )}
+            </th>
+            <th onClick={() => handleOrdenarColumna('Name')}>Nombre 
+            {columnaOrden === 'Name' && (
+                direccionOrden === 'ascendente' ? '▲' : '▼'
+               )}</th>
+            <th onClick={() => handleOrdenarColumna('Especialidad')}> Especialidad 
+            {columnaOrden === 'Especialidad' && (
+                direccionOrden === 'ascendente' ? '▲' : '▼'
+               )}</th>
+            {/* <th>ID</th>
             <th>Nombre</th>
-            <th>Especialidad</th>
+            <th>Especialidad</th> */}
             <th>Matricula</th>
             <th>Controles</th>
           </tr>
         </thead>
         <tbody>
-        {}
-          {users.map(user => (
-            <tr key={user.id}>
+         {ordenarDatos().map(user => (
+              <tr key={user.id}>
               <td>{user.id}</td>
               <td>{user.Name}</td>
               <td>{user.Especialidad}</td>
