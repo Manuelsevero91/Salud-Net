@@ -18,11 +18,7 @@ h1 {
   color: rgb(245, 249, 249);
 
 }
-#buttonProf {
-  background-color: rgb(44, 99, 103);
-  margin-top: 280px;
-  padding: 0px;
-}
+
 .nosotros {
   display: flex;
   flex-direction: column;

@@ -28,19 +28,25 @@ const Formulario = () => {
     setEnviado(true);
   };
   const handleClose = () => {
-    setCerrado(true);
+    setCerrado(true)
+  
   };
 
   if (cerrado) {
-    return null;
-  }
+    return (
+      <div className="form-overlay">
+        <div className="form-container">
+      </div>
+      </div>
+    )
+  };
 
 
   if (enviado) {
     return (
       <div className="form-overlay">
         <div className="form-container">
-          <p>Formulario enviado correctamente.</p>
+          <p><strong>Formulario enviado correctamente.</strong></p>
         </div>
       </div>
     );
@@ -50,7 +56,7 @@ const Formulario = () => {
     <div className="form-overlay">
       <div className="form-container">
         <form onSubmit={handleSubmit}>
-        <button onClick={handleClose} className="close-button">X</button>
+        <button onClick={handleClose} className="close-button">Cerrar</button>
           <div>
             <label htmlFor="nombre">Nombre y Apellido</label>
             <input
@@ -78,7 +84,7 @@ const Formulario = () => {
               onChange={handleConsultaChange}
             />
           </div>
-          <button type="submit">Enviar</button>
+          <button id="btnSubContact" type="submit">Enviar</button>
         </form>
       </div>
     </div>

@@ -12,7 +12,7 @@ function Home({isLoggedIn}) {
         {/* {isLoggedIn && (
         <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>   
         )}  */}
-        {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}
+        {/* {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>} */}
     </div>
     
     <div className="nosotros">
@@ -25,12 +25,7 @@ function Home({isLoggedIn}) {
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum."
-    </p>
-    {isLoggedIn && (
-          <p>
-            Aquí puedes agregar un párrafo adicional sobre nosotros cuando el inicio de sesión es correcto.
-          </p>
-        )}
+    </p>   
   </div>
   <Marketing />
   </body>
