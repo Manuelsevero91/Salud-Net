@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 
 function Profesionales() {
-  const [users, setUsers] = useState([]);
   const tablaRef = useRef(null);
+  const [users, setUsers] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [editData, setEditData] = useState({
     id: null, 
@@ -10,7 +10,6 @@ function Profesionales() {
     Especialidad: "",
     Matricula: ""
   });
-
   const [search, setSearch] = useState("");
   const [searchBy, setSearchBy] = useState("");
   const [columnaOrden, setColumnaOrden] = useState('');
@@ -26,6 +25,7 @@ function Profesionales() {
       .then(data => setUsers(data))
       .catch(error => console.log(error));
   }, []);
+  
 
   //funcion para agregar un nuevo profesional
   function handleAddProf(e) {
@@ -238,9 +238,8 @@ function ordenarDatos(){
   return (
     <>
     <div className='logo'>
-      {/* <img src={logoSN} alt="Logo de SaludNet" /> */}
+      {/* <img src={logoSaludNet} alt="Logo de SaludNet" /> */}
       <p>Seleccione si desea buscar por nombre o especialidad</p>
-
       <select value={searchBy} onChange={handleSearchBy} className="selector">
         <option value="nombre">Nombre</option>
         <option value="especialidad">Especialidad</option>
@@ -286,7 +285,7 @@ function ordenarDatos(){
               <td>{user.Matricula}</td>
               <td>
                 <button onClick={() => handleEditar(user.id)} className="controles">Editar</button>
-                <button onClick={() => handleDelete(user.id)} className="controles">Eliminar</button>
+                <button onClick={() => handleDelete(user.id, user.Name)} className="controles">Eliminar</button>
               </td>
             </tr>
           ))}

@@ -20,7 +20,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faInstagram} />
         </a>
       </div>
-      <p className="footer-text">© 2023 Tu Sitio. Todos los derechos reservados.</p>
+      <p className="footer-text">© 2023 Salud Net. Todos los derechos reservados.</p>
     </footer>
   );
 };
