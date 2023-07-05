@@ -39,6 +39,10 @@ function App() {
         <Route exact path="/contacto" element={<Contacto />} />
         <Route path="/login" element={<Login handleLogin={handleLogin} />} />
         <Route path="/profesionales" element={<Users/>} />
+        {/* <Route
+          path="/profesionales"
+          element={<ProtectedRoute element={<Users />} isLoggedIn={isLoggedIn} />}
+        /> */}
         <Route path='*' element={<NotFound />} />
     </Routes>
 
