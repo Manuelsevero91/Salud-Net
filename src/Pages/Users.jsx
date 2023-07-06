@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+import Swal from 'sweetalert2';
+import logosaludnet from "../assets/logosaludnet.png";
 
 function Profesionales() {
   const tablaRef = useRef(null);
@@ -27,20 +29,8 @@ function Profesionales() {
   }, []);
   
 
-  //funcion para agregar un nuevo profesional
-  function handleAddProf(e) {
-    e.preventDefault();
-    const name = e.target.elements.Name.value;
-    const especialidad = e.target.elements.Especialidad.value;
-    const matricula = e.target.elements.Matricula.value;
-
-    const newProfesional = {
-      Name: name,
-      Especialidad: especialidad,
-      Matricula: matricula
-    };
-
-    //chequea si existe el id, si existe lo edita
+    function saveProfesional (newProfesional){
+      //chequea si existe el id, si existe lo edita
     if (editData.id) {
       fetch(baseUrl + `/${editData.id}`, {
         method: "PUT",
@@ -74,21 +64,52 @@ function Profesionales() {
     }
   }
 
+  //funcion para agregar un nuevo profesional
+  function handleAddProf(e) {
+    e.preventDefault();
+    const name = e.target.elements.Name.value;
+    const especialidad = e.target.elements.Especialidad.value;
+    const matricula = e.target.elements.Matricula.value;
+
+    const newProfesional = {
+      Name: name,
+      Especialidad: especialidad,
+      Matricula: matricula
+    };
+    saveProfesional(newProfesional);
+  }
+
+
   //funcion para eliminar un profesional
   function handleDelete(id, userName) {
-    const confirmacion = window.confirm(`¿Esta seguro que desea eliminar al profesional ${userName} ?`);
-    if (confirmacion){
+    Swal.fire({
+      imageUrl: logosaludnet ,
+      imageHeight: 250,
+      imageWidth: 250,
+      html: `<p>Esta seguro que desea eliminar a <b>${userName}</b> de la base de datos </p>` ,
+      timer: 5000,
+      icon:"error",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, eliminar",
+      cancelButtonText: "Cancelar"
+    }).then(result => { 
+    if (result.isConfirmed){
     fetch(baseUrl + `/${id}`, {
+      
       method: "DELETE",
     })
       .then(res => res.json())
       .then(data => console.log(data))
+    
       .catch(err => console.error(err));
 
     const updatedUsers = users.filter(user => user.id !== id);
     setUsers(updatedUsers);
   }
-  }
+  }) }
+  
   //funcion para editar un profesional
   function handleEditar(id) {
     const userToEdit = users.find(user => user.id === id);
@@ -136,45 +157,7 @@ function Profesionales() {
     Especialidad: editData.Especialidad,
     Matricula: editData.Matricula
   };
-
-  // Comprueba si el ID ya existe en la base de datos
-  if (idExists) {
-    // El ID ya existe, mostrar un mensaje de error o tomar la acción necesaria
-    console.log('El ID ya existe en la base de datos');
-    return;
-  }
-
-  if (editData.id) {
-    fetch(baseUrl + `/${editData.id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(updatedUser),
-    })
-      .then(res => res.json())
-      .then(data => {
-        const updatedUsers = users.map(user => {
-          if (user.id === editData.id) {
-            return data;
-          }
-          return user;
-        });
-        setUsers(updatedUsers);
-        closeModal();
-      })
-      .catch(err => console.log(err));
-  } else {
-    fetch(baseUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(updatedUser),
-    })
-      .then(res => res.json())
-      .then(data => {
-        setUsers(prevUsers => [...prevUsers, data]);
-        closeModal();
-      })
-      .catch(err => console.error(err));
-  }
+  saveProfesional(updatedUser);
 }
 
 // funcion de busqueda
@@ -237,8 +220,12 @@ function ordenarDatos(){
   
   return (
     <>
-    <div className='logo'>
-      {/* <img src={logoSaludNet} alt="Logo de SaludNet" /> */}
+    {showModal && <div className="modal-overlay" />}
+    <div className='globo'>
+    <div className='titular'>
+   <p className="titulo">PROFESIONALES DE SALUDNET </p>
+   </div>
+   <div className='opcion'>
       <p>Seleccione si desea buscar por nombre o especialidad</p>
       <select value={searchBy} onChange={handleSearchBy} className="selector">
         <option value="nombre">Nombre</option>
@@ -250,9 +237,9 @@ function ordenarDatos(){
         onChange={handleSearchBar}
         value={search} 
         className="selector"/>
-    </div>
-    <p className="titulo">PROFESIONALES DE SALUDNET </p>
+      </div>
       <button onClick={openModal} className="controles">Agregar Profesional</button>
+      </div>
       <table ref={tablaRef} className="table">
         <thead>
           <tr>
@@ -308,8 +295,8 @@ function ordenarDatos(){
       <label>Password 
         <input type="text" name="password"/>
       </label>
-      <button type="submit" onClick={handleSave}>Guardar</button>
-      <button type="button" onClick={closeModal}>Cancelar</button>
+      <button type="submit" onClick={handleSave} className="controles">Guardar</button>
+      <button type="button" onClick={closeModal} className="controles">Cancelar</button>
     </form>
   )}
     </>
