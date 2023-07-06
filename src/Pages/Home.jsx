@@ -12,7 +12,7 @@ function Home({isLoggedIn}) {
         {/* {isLoggedIn && (
         <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>   
         )}  */}
-        {/* {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>} */}
+        {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}
     </div>
     
     <div className="nosotros">
@@ -33,4 +33,3 @@ function Home({isLoggedIn}) {
   );
 };
 export default Home;
-

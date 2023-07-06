@@ -17,6 +17,7 @@ import Contacto from "./Pages/Contacto"
 import {useState} from 'react'
 import Users from "./Pages/Users"
 import NotFound from "./Pages/NotFound";
+import ProtectedRoute from "./Componentes/ProtectedRoute";
 
 
 function App() {
@@ -37,12 +38,10 @@ function App() {
    <Routes>
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
         <Route exact path="/contacto" element={<Contacto />} />
-        <Route path="/login" element={<Login handleLogin={handleLogin} />} />
+        <Route path="/login" element={<Login handleLogin={handleLogin} />}/>
+        <Route element={<ProtectedRoute isLoggedIn={isLoggedIn}/>}>
         <Route path="/profesionales" element={<Users/>} />
-        {/* <Route
-          path="/profesionales"
-          element={<ProtectedRoute element={<Users />} isLoggedIn={isLoggedIn} />}
-        /> */}
+        </Route>   
         <Route path='*' element={<NotFound />} />
     </Routes>
 
@@ -54,4 +53,3 @@ function App() {
 }
 
 export default App;
-

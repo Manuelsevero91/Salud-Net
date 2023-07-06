@@ -1,92 +1,116 @@
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(44, 99, 135);
-    color: white;
-    padding: 20px;
-    z-index: 9999;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 15px;
-  }
-  
-  table {
-    width: 100%;
-    margin: 10px;
-    border-spacing: 0;
-    border-collapse: collapse;
-    background-color:  rgb(44, 99, 250);
-    border: 1px solid #ddd;
-    margin-top: 20px;
-  }
-  
-  th {
-    background-color: rgb(44, 99, 103);;
-    color: white;
-    padding: 8px;
-    text-align: left;
-    height: 60px;
-    font-size: larger;
-  }
-  
-  td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 5px solid #ddd;
-    color: beige;
-    font-size: larger ;
-font-weight:;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(44, 99, 150);
+  color: white;
+  padding: 20px;
+  z-index: 9999;
+  font-family: sans-serif;
+}
 
-  }
-  
-  .controles {
-    padding: 5px 10px;
-    background-color:rgb(44, 99, 250);
-    color: black;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .controles:hover {
-    background-color: rgb(255, 255, 255); 
-    color: rgb(44, 99, 250); 
-    border: 1px solid rgb(44, 99, 250); 
-  }
-  
-  .titulo{
-    font-size:xx-large;
-    color: rgb(44, 99, 135);
-  }
-  
-  .logo img{
-    position: absolute;
-    width: 75px;
-    top: 10px;
-    left: 10px;
-  }
-  
-  .selector{
-    padding: 5px 10px;    
-    border-color:rgb(44, 99, 250);
-    color: black;
-    cursor: pointer;
-    width: 250px;  
- 
-  }
-  
-  .selector:hover {
-    color: rgb(44, 99, 250); 
-    border: 1px solid rgb(44, 99, 250); 
-  }
-  .logo{
-    background-color: aqua;
-    display:flex;
-   flex-direction:column;
-   justify-content: center;
-    height: 300px;   
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+}
 
-  }
+form label {
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  color: white;
+  justify-content: center;
+      
+
+}
+
+table {
+  width: 100%;
+  margin: 10px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color:  rgb(44, 99, 150);
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  color: white;
+  font-family: sans-serif;
+}
+
+th {
+  background-color: rgb(44, 99, 103);
+  color: white;
+  padding: 8px;
+  text-align: left;
+  height: 60px;
+  font-size: larger;
+  text-align: center;
+}
+
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 5px solid #ddd;
+  color: white;
+  font-size: larger ;
+  text-align: center;
+}
+
+.controles {
+  padding: 5px 10px;
+  background-color:rgb(44, 99, 150);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: medium;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.controles:hover {
+  background-color: rgb(255, 255, 255); 
+  color: rgb(44, 99, 250); 
+  border: 1px solid rgb(44, 99, 250); 
+}
+
+.titular{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  height: 200px;  
+  margin-top: 50px; 
+  margin-bottom: -50px;
+}
+.titulo{
+  font-size:50px;
+  color: rgb(44, 99, 135);
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.selector{
+  padding: 5px 10px;    
+  border-color:rgb(44, 99, 250);
+  color: rgb(44, 99, 150);
+  cursor: pointer;
+  width: 250px;  
+  border-radius: 10px; 
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.selector:hover {
+  color: rgb(44, 99, 250); 
+  border: 1px solid rgb(44, 99, 250); 
+}
+
+.opcion{
+  border-radius: 10px; 
+}

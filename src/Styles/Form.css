@@ -16,6 +16,7 @@
 
 .form-container {
   position: relative;
+  margin-top: 150px;
   font-weight: bold;
   width: 500px;
   height:500px;
@@ -40,7 +41,7 @@
 }
 .close-button {
   position: absolute;
-  top: 30px;
+  top: 10px;
   right: 10px;
   background: none;
   border: none;

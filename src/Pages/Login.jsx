@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-// import Menu from '../Componentes/Menu.jsx';
 import {BeatLoader} from 'react-spinners'
 import Swal from 'sweetalert2'
 import logoSN from '../assets/logosaludnet.png'
@@ -117,4 +116,3 @@ function handleSubmit(e) {
 }
 
 export default Login;
-
