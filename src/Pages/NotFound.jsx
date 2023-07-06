@@ -1,10 +1,9 @@
-import React from 'react'
 
 function NotFound() {
     return(
    
      <div>
-        <h1><strong> 404 Not Found </strong></h1>
+        <h2><strong> 404 Not Found </strong></h2>
     </div>
 
     );
