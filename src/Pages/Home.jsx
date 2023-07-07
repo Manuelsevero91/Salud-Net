@@ -1,4 +1,5 @@
 import Marketing from '../Componentes/Marketing'
+import Footer from '../Componentes/Footer'
 
 function Home({isLoggedIn}) {
 
@@ -6,9 +7,7 @@ function Home({isLoggedIn}) {
     <>
      <body class= 'inicio'>
     <div className = "container">
-   
         {!isLoggedIn && <h1>Bienvenidos a Salud Net</h1>}
-        
     </div>
     
     <div className="nosotros">

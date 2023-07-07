@@ -10,11 +10,10 @@ import './Styles/Footer.css'
 // import './Styles/Login1.css';
 import Home from "./Pages/Home";
 import NavBar from "./Componentes/NavBar";
-
 import { Routes, Route} from 'react-router-dom';
 import Login from "./Pages/Login";
 import Contacto from "./Pages/Contacto"
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Users from "./Pages/Users"
 import NotFound from "./Pages/NotFound";
 import ProtectedRoute from "./Componentes/ProtectedRoute";
@@ -22,17 +21,25 @@ import ProtectedRoute from "./Componentes/ProtectedRoute";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
+    if (storedIsLoggedIn === 'true') {
+      setIsLoggedIn(true);
+  }
+}, []);
+
   const handleLogin = () => {
     setIsLoggedIn(true);
-
+    localStorage.setItem('isLoggedIn', 'true');
   };
   const handleLogout = () => {
     setIsLoggedIn(false);
+    localStorage.removeItem('isLoggedIn');
   };
 
   return (
     <>
-    
    <NavBar isLoggedIn={isLoggedIn} handleLogout={handleLogout} /> 
 
    <Routes>
