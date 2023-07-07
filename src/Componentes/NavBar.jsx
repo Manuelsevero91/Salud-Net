@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Link } from 'react-router-dom'
-import Login from '../Pages/Login'
 import logoSN from '../assets/logosaludnet.png'
 
 
@@ -17,7 +15,6 @@ function NavBar({ isLoggedIn, handleLogout }) {
         <nav>
           <ul className="nav-links">
             <li><Link to="/"><img id="logoSN" src={logoSN} alt="Logo" />
-              {/* style={{ width: "50px", height: "auto" }} */}
             </Link>
             </li>
             {isLoggedIn ? (

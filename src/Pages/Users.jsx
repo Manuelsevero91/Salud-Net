@@ -17,7 +17,6 @@ function Profesionales() {
   const [columnaOrden, setColumnaOrden] = useState('');
   const [direccionOrden, setDireccionOrden] = useState('');
 
-
   const baseUrl = "https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
  
     //lee la base de datos
@@ -82,7 +81,7 @@ function Profesionales() {
 
   //funcion para eliminar un profesional
   function handleDelete(id, userName) {
-    Swal.fire({
+      Swal.fire({
       imageUrl: logosaludnet ,
       imageHeight: 250,
       imageWidth: 250,
@@ -274,7 +273,7 @@ function ordenarDatos(){
                 <button onClick={() => handleEditar(user.id)} className="controles">Editar</button>
                 <button onClick={() => handleDelete(user.id, user.Name)} className="controles">Eliminar</button>
               </td>
-            </tr>
+              </tr>
           ))}
         </tbody>
       </table>
@@ -304,3 +303,7 @@ function ordenarDatos(){
 }
 
 export default Profesionales;
+
+
+
+
