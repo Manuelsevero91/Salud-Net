@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Link } from 'react-router-dom'
-import Login from '../Pages/Login'
 import logoSN from '../assets/logosaludnet.png'
 
 
