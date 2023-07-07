@@ -5,7 +5,7 @@
   right: 0;
   bottom: 0;
   background-image: url("../assets/Consultorio.jpg");
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: cover;
   display: flex;
@@ -13,38 +13,34 @@
   justify-content: center;
   z-index: 2;
 }
-
-.form-container {
-  position: relative;
-  font-weight: bold;
-  width: 500px;
-  height:500px;
-}
-#nombre,
-#email {
-  width: 100%;
-  height: 40px;
-  color: rgb(44, 99, 103);
-}
 #consulta {
   width: 100%;
   height: 150px;
   color: rgb(44, 99, 103);
 }
+
+.form-container {
+  position: relative;
+  margin-top: 150px;
+  font-weight: bold;
+  width: 500px;
+  height: 500px;
+}
+
 #btnSubContact {
   background-position: center;
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 6px;
   margin-top: 20px;
   color: white;
 }
 .close-button {
   position: absolute;
-  top: 30px;
+  margin-top: 0;
   right: 10px;
   background: none;
   border: none;
   cursor: pointer;
-  color: rgb(44, 99, 103);;
+  color: rgb(23, 60, 62);
   font-weight: bold;
 }

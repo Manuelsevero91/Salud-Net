@@ -20,7 +20,7 @@
   z-index: 999;
 }
 
-form label {
+#userLabel {
   display: block;
   margin-bottom: 15px;
   margin-top: 10px;
@@ -111,6 +111,9 @@ td {
   border: 1px solid rgb(44, 99, 250); 
 }
 
+.opcion{
+  border-radius: 10px; 
+}
 .opcion{
   border-radius: 10px; 
 }

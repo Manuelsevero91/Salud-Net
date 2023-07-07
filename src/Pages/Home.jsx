@@ -1,4 +1,3 @@
-import {Link} from 'react-router-dom'
 import Marketing from '../Componentes/Marketing'
 import Footer from '../Componentes/Footer'
 
@@ -30,4 +29,3 @@ function Home({isLoggedIn}) {
   );
 };
 export default Home;
-
