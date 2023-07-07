@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BeatLoader } from 'react-spinners'
+import {BeatLoader} from 'react-spinners'
 import Swal from 'sweetalert2'
 import logoSN from '../assets/logosaludnet.png'
 import { useNavigate } from 'react-router-dom';
@@ -34,10 +34,9 @@ function Login({ handleLogin }) {
   if (!users.length && !error) return <BeatLoader />;
   if (error) {
     return (
-      <div className='error-container'>
-        <img src={error404Image} alt="Error 404" />
-      </div>)
-  }
+    <div className='error-container'>
+      <img src= {error404Image} alt= "Error 404"/> 
+      </div>)}
 
   function handleSubmit(e) {
     e.preventDefault();

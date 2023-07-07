@@ -1,5 +1,4 @@
 import Marketing from '../Componentes/Marketing'
-import Footer from "../Componentes/Footer";
 
 function Home({isLoggedIn}) {
 
