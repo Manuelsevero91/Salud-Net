@@ -280,19 +280,19 @@ function ordenarDatos(){
       </table>
       {showModal && (
     <form onSubmit={handleAddProf} className="modal">
-    <label>Id
+    <label id="userLabel">Id
     <input type="text" name="id" value={editData.id} readOnly />
     </label>
-      <label>Name: 
+      <label id="userLabel">Name: 
         <input type="text" name="Name" value={editData.Name} onChange={handleChange}/>
       </label>
-      <label>Especialidad:
+      <label id="userLabel">Especialidad:
         <input type="text" name="Especialidad" value={editData.Especialidad} onChange={handleChange}/>
       </label>
-      <label>Matricula: 
+      <label id="userLabel">Matricula: 
         <input type="text" name="Matricula" value={editData.Matricula} onChange={handleChange}/>
       </label>
-      <label>Password 
+      <label id="userLabel">Password 
         <input type="text" name="password"/>
       </label>
       <button type="submit" onClick={handleSave} className="controles">Guardar</button>

@@ -10,7 +10,7 @@ import './Styles/Footer.css'
 // import './Styles/Login1.css';
 import Home from "./Pages/Home";
 import NavBar from "./Componentes/NavBar";
-import Footer from "./Componentes/Footer";
+
 import { Routes, Route} from 'react-router-dom';
 import Login from "./Pages/Login";
 import Contacto from "./Pages/Contacto"
@@ -44,10 +44,6 @@ function App() {
         </Route>   
         <Route path='*' element={<NotFound />} />
     </Routes>
-
-<Footer/>
-
-
     </>
   );
 }

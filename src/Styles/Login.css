@@ -1,4 +1,4 @@
-body.login{
+body.login {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -7,28 +7,31 @@ body.login{
   /* align-items: center; */
   min-width: 320px;
   min-height: 100vh;
-  background-image:url('../assets/Consultorio.jpg');
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position: center center
+  background-image: url("../assets/Consultorio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-input{
+input {
   width: 100%;
   height: 40px;
 }
-label{
-margin-top: 40px;
-  padding: 0;
-  color:#0c3441;
+label {  
+
+  color: rgb(33, 36, 36);
+  font-size: 22px;
+}
+#consulta{
+  color: rgb(212, 72, 37);
 }
 #inicioSesion {
   font-size: 3.2em;
   line-height: 1.1;
-  color: rgb(44, 99, 103); 
+  color: rgb(44, 99, 103);
   margin-top: 20px;
 }
 
-#enviarLogin{
+#enviarLogin {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -51,32 +54,29 @@ margin-top: 40px;
   :root {
     color: #213547;
     background-color: #ffffff;
-  }}
-  /* a:hover {
+  }
+}
+/* a:hover {
     color: #747bff;
   } */
 #enviarLogin {
-    background-color:  rgb(44, 99, 103);
-   color: white;
-   font-weight:bold;
-  }
-  #error {
-    margin-bottom: 50px;
-  }
- #password{
+  background-color: rgb(44, 99, 103);
+  color: white;
+  font-weight: bold;
+}
+#error {
   margin-bottom: 50px;
- }
- #nombre{
+}
+#password {
+  margin-bottom: 50px;
+}
+#nombre {
   margin-top: 5px;
   margin-bottom: 5px;
- }
-label{
-  font-size: 20px;
-
-}
-.error-container img{
-width: 100%;
-height: 100%;
-object-fit: cover;
 }
 
+.error-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

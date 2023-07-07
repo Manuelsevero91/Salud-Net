@@ -20,7 +20,7 @@
   z-index: 999;
 }
 
-form label {
+#userLabel {
   display: block;
   margin-bottom: 15px;
   margin-top: 10px;

@@ -17,7 +17,6 @@ function NavBar({ isLoggedIn, handleLogout }) {
         <nav>
           <ul className="nav-links">
             <li><Link to="/"><img id="logoSN" src={logoSN} alt="Logo" />
-              {/* style={{ width: "50px", height: "auto" }} */}
             </Link>
             </li>
             {isLoggedIn ? (
@@ -26,7 +25,7 @@ function NavBar({ isLoggedIn, handleLogout }) {
               <li><Link to="/login">Ingresar</Link></li>
             )}
             <li><Link to="/contacto">Contacto</Link></li>
-           <li> {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}</li>
+            <li> {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}</li>
           </ul>
 
         </nav>
