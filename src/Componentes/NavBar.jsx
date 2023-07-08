@@ -28,9 +28,9 @@ function NavBar() {
             <li><Link to="/contacto">Contacto</Link></li>
             <li> {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}</li>
           </ul>
+
         </nav>
       </div> */}
-
  <div>
       <nav>
         <ul className="nav-links">
@@ -39,13 +39,11 @@ function NavBar() {
               <img id="logoSN" src={logoSN} alt="Logo" />
             </Link>
           </li>
-          {isLoggedIn ? ( 
+          {isLoggedIn ? (
             <>
               <li >{username || 'Nombre de usuario'}</li>
               <li>
-                <Link to="/" onClick={handleLogoutClick}>
-                  Cerrar sesión
-                </Link>
+               
               </li>
             </>
           ) : (
@@ -53,9 +51,6 @@ function NavBar() {
               <Link to="/login">Ingresar</Link>
             </li>
           )}
-          <li>
-            <Link to="/contacto">Contacto</Link>
-          </li>
           
           <li>{isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}</li>
         </ul>

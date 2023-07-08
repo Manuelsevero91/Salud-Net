@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Componentes/UserContext';
 
 
+
 function Login({isLoggedIn}) {
   const { handleLogin } = useAuth();
 
@@ -32,7 +33,10 @@ function Login({isLoggedIn}) {
       .catch((err) => setError(true));
   }, []);
 
-  if (!users.length && !error) return <BeatLoader />;
+  if (!users.length && !error) return (
+  <BeatLoader style={{ position:' fixed', top: '50%', left:' 50%',
+    transform: 'translate(-50%, -50%)' }} /> 
+  )
   if (error) {
     return (
     <div className='error-container'>

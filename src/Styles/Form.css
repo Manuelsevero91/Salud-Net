@@ -44,3 +44,12 @@
   color: rgb(23, 60, 62);
   font-weight: bold;
 }
+#FormSucces{
+  background-color: whitesmoke ;
+  color: rgb(44, 99, 103);
+  align-self: center;
+  margin-top: 100px;
+  padding:20px 80px;
+  align-content: center;
+border: solid rgb(44, 99, 103) 2px;
+}

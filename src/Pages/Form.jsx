@@ -46,7 +46,7 @@ const Formulario = () => {
     return (
       <div className="form-overlay">
         <div className="form-container">
-          <p><strong>Formulario enviado correctamente.</strong></p>
+          <p id="FormSucces"><strong>Formulario enviado correctamente</strong></p>
         </div>
       </div>
     );
