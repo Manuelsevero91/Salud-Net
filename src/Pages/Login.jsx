@@ -3,7 +3,7 @@ import {BeatLoader} from 'react-spinners'
 import Swal from 'sweetalert2'
 import logoSN from '../assets/logosaludnet.png'
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../Componentes/AuthContext';
+import { useAuth } from '../Componentes/UserContext';
 
 
 function Login({isLoggedIn}) {
@@ -17,7 +17,6 @@ function Login({isLoggedIn}) {
   const [loginUser, setLoginUser] = useState(null);
   const [error, setError] = useState(false);
   const notificacionRef = useRef(null);
-  // const nombreRef = useRef(null);
 
   useEffect(() => {
     fetch(urlBase)
@@ -28,7 +27,6 @@ function Login({isLoggedIn}) {
       .then((resOk) => {
         setTimeout(() => {
           setUsers((prev) => (prev = resOk));
-          // nombreRef.current.focus()
         }, 1000);
       })
       .catch((err) => setError(true));
@@ -52,10 +50,8 @@ function Login({isLoggedIn}) {
         imageUrl: logoSN,
         imageHeight: 250,
         imageWidth: 250,
-        // imageAlert: "Logo de Salud Net",
         html: `<p>El usuario <b>${e.target.nombre.value}</b> no existe en la base de datos </p> `,
         timer: 3000,
-        // icon: "error",
       })
       setIngresar(false);
       setLoginUser(null);
@@ -68,10 +64,8 @@ function Login({isLoggedIn}) {
         imageUrl: logoSN,
         imageHeight: 250,
         imageWidth: 250,
-        // imageAlert: "Logo de Salud Net",
         html: `<p>Bienvenido <b>${e.target.nombre.value}</b> a nuestro sitio.</p> `,
         timer: 3000,
-        // icon: "sucess",
 
       })
       handleLogin(enteredUsername);
@@ -89,7 +83,6 @@ function Login({isLoggedIn}) {
         imageWidth: 250,
         html: `<p>La <b>CONTRASEÑA</b> ingresada no es correcta, vuelva a intentarlo </p> `,
         timer: 3000,
-        // icon: "error",
       })
     }
     e.target.reset();

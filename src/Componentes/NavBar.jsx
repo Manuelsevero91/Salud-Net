@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import logoSN from '../assets/logosaludnet.png'
-import { useAuth} from '../Componentes/AuthContext';
+import { useAuth} from './UserContext';
 
 
 
@@ -28,9 +28,9 @@ function NavBar() {
             <li><Link to="/contacto">Contacto</Link></li>
             <li> {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}</li>
           </ul>
-
         </nav>
       </div> */}
+
  <div>
       <nav>
         <ul className="nav-links">
@@ -39,7 +39,7 @@ function NavBar() {
               <img id="logoSN" src={logoSN} alt="Logo" />
             </Link>
           </li>
-          {isLoggedIn ? (
+          {isLoggedIn ? ( 
             <>
               <li >{username || 'Nombre de usuario'}</li>
               <li>
@@ -62,11 +62,6 @@ function NavBar() {
       </nav>
     </div>
   
-
-
-
-
-
     </>
   );
 }

@@ -1,6 +1,6 @@
 import Marketing from '../Componentes/Marketing'
 import Footer from '../Componentes/Footer'
-import {useAuth}  from '../Componentes/AuthContext';
+import {useAuth}  from '../Componentes/UserContext';
 
 
 function Home() {
