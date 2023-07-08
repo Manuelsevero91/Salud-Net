@@ -3,9 +3,12 @@ import {BeatLoader} from 'react-spinners'
 import Swal from 'sweetalert2'
 import logoSN from '../assets/logosaludnet.png'
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../Componentes/AuthContext';
 
 
-function Login({ handleLogin }) {
+function Login({isLoggedIn}) {
+  const { handleLogin } = useAuth();
+
   const navigate = useNavigate();
   const urlBase = "https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
 
@@ -14,7 +17,7 @@ function Login({ handleLogin }) {
   const [loginUser, setLoginUser] = useState(null);
   const [error, setError] = useState(false);
   const notificacionRef = useRef(null);
-  const nombreRef = useRef(null);
+  // const nombreRef = useRef(null);
 
   useEffect(() => {
     fetch(urlBase)
@@ -52,7 +55,7 @@ function Login({ handleLogin }) {
         // imageAlert: "Logo de Salud Net",
         html: `<p>El usuario <b>${e.target.nombre.value}</b> no existe en la base de datos </p> `,
         timer: 3000,
-        icon: "error",
+        // icon: "error",
       })
       setIngresar(false);
       setLoginUser(null);
@@ -68,10 +71,10 @@ function Login({ handleLogin }) {
         // imageAlert: "Logo de Salud Net",
         html: `<p>Bienvenido <b>${e.target.nombre.value}</b> a nuestro sitio.</p> `,
         timer: 3000,
-        icon: "sucess",
+        // icon: "sucess",
 
       })
-      handleLogin();
+      handleLogin(enteredUsername);
       navigate('/');
 
       setIngresar(true);
@@ -86,7 +89,7 @@ function Login({ handleLogin }) {
         imageWidth: 250,
         html: `<p>La <b>CONTRASEÑA</b> ingresada no es correcta, vuelva a intentarlo </p> `,
         timer: 3000,
-        icon: "error",
+        // icon: "error",
       })
     }
     e.target.reset();
@@ -94,13 +97,13 @@ function Login({ handleLogin }) {
 
   return (
     <>
-      <body className='login'>
+      <div className='login'>
         <form ref={notificacionRef} onSubmit={handleSubmit}>
           <h3 id="inicioSesion"><strong>Iniciar Sesión</strong></h3>
           <label htmlFor="nombre"><strong>Usuario</strong></label>
 
-          <input ref={nombreRef} type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" style={{ display: 'block' }} />
-
+          <input  type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" style={{ display: 'block' }} />
+          
           <label htmlFor="password"><strong>Contraseña</strong></label>
           <input type="password" name="password" id="password" placeholder="Introduzca su contraseña" style={{ display: 'block' }} />
 
@@ -108,8 +111,8 @@ function Login({ handleLogin }) {
 
           <button id="enviarLogin" type="submit">Enviar</button>
         </form>
-        {ingresar && <Menu name={loginUser.name} />}
-      </body>
+        {isLoggedIn && ingresar && <Menu name={loginUser.name} />}
+      </div>
     </>
   );
 }
