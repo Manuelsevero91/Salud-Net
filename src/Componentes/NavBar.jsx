@@ -14,49 +14,24 @@ function NavBar() {
 
   return (
     <>
-      {/* <div>
+      <div className="nav-container">
         <nav>
           <ul className="nav-links">
-            <li><Link to="/"><img id="logoSN" src={logoSN} alt="Logo" />
-            </Link>
-            </li>            
+            <li><Link to="/"><img id="logoSN" src={logoSN} alt="Logo" /></Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
             {isLoggedIn ? (
-              <li><Link to="/" onClick={handleLogoutClick}>Cerrar sesión</Link></li>
+              <>   
+              <Link to="/" onClick={handleLogoutClick}>Cerrar sesión</Link>
+                <li id="NombreUser">{'Hola'} {username || 'Nombre de usuario'}</li>
+                <li></li>
+              </>
             ) : (
               <li><Link to="/login">Ingresar</Link></li>
             )}
-            <li><Link to="/contacto">Contacto</Link></li>
-            <li> {isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}</li>
+            <li>{isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}</li>
           </ul>
-
         </nav>
-      </div> */}
- <div>
-      <nav>
-        <ul className="nav-links">
-          <li>
-            <Link to="/">
-              <img id="logoSN" src={logoSN} alt="Logo" />
-            </Link>
-          </li>
-          {isLoggedIn ? (
-            <>
-              <li >{username || 'Nombre de usuario'}</li>
-              <li>
-               
-              </li>
-            </>
-          ) : (
-            <li>
-              <Link to="/login">Ingresar</Link>
-            </li>
-          )}
-          
-          <li>{isLoggedIn && <Link to="/profesionales" id="buttonProf">Nuestros Profesionales</Link>}</li>
-        </ul>
-      </nav>
-    </div>
-  
+      </div>
     </>
   );
 }
