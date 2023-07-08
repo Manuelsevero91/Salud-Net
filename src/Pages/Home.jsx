@@ -5,10 +5,10 @@ function Home({isLoggedIn}) {
 
   return (
     <>
-     <body class= 'inicio'>
-    <div className = "container">
+     <div className= 'inicio'>
+    <section className = "container">
         {!isLoggedIn && <h1>Bienvenidos a Salud Net</h1>}
-    </div>
+    </section>
     
     <div className="nosotros">
     <h2>Sobre Nosotros</h2>
@@ -20,11 +20,12 @@ function Home({isLoggedIn}) {
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum."
-    </p>   
+    </p>  
+   
   </div>
   <Marketing />
   <Footer/>
-  </body>
+  </div>
     </>
   );
 };

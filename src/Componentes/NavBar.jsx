@@ -3,7 +3,7 @@ import logoSN from '../assets/logosaludnet.png'
 
 
 
-function NavBar({ isLoggedIn, handleLogout }) {
+function NavBar({ isLoggedIn, handleLogout}) {
   const handleLogoutClick = () => {
     handleLogout();
   };
