@@ -16,29 +16,30 @@ import {useState, useEffect} from 'react'
 import Users from "./Pages/Users"
 import NotFound from "./Pages/NotFound";
 import ProtectedRoute from "./Componentes/ProtectedRoute";
+import { AuthProvider } from './Componentes/AuthContext';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  useEffect(() => {
-    const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
-    if (storedIsLoggedIn === 'true') {
-      setIsLoggedIn(true); 
-  }
-}, []);
+//   useEffect(() => {
+//     const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
+//     if (storedIsLoggedIn === 'true') {
+//       setIsLoggedIn(true); 
+//   }
+// }, []);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-    localStorage.setItem('isLoggedIn', 'true');   
-  };
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-    localStorage.removeItem('isLoggedIn');
-     };
+//   const handleLogin = () => {
+//     setIsLoggedIn(true);
+//     localStorage.setItem('isLoggedIn', 'true');   
+//   };
+//   const handleLogout = () => {
+//     setIsLoggedIn(false);
+//     localStorage.removeItem('isLoggedIn');
+//      };
 
   return (
     <>
-   <NavBar isLoggedIn={isLoggedIn} handleLogout={handleLogout} /> 
+   {/* <NavBar isLoggedIn={isLoggedIn} handleLogout={handleLogout} /> 
 
    <Routes>
         <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
@@ -48,7 +49,21 @@ function App() {
         <Route path="/profesionales" element={<Users/>} />
         </Route>   
         <Route path='*' element={<NotFound />} />
-    </Routes>
+    </Routes> */}
+<AuthProvider>
+    <NavBar  /> 
+
+<Routes>
+     <Route path="/" element={<Home  />} />
+     <Route exact path="/contacto" element={<Contacto />} />
+     <Route path="/login" element={<Login />}/>
+     <Route element={<ProtectedRoute />}>
+     <Route path="/profesionales" element={<Users/>} />
+     </Route>   
+     <Route path='*' element={<NotFound />} />
+ </Routes>
+ </AuthProvider>
+
     </>
 
   

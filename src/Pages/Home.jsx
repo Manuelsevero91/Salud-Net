@@ -1,7 +1,11 @@
 import Marketing from '../Componentes/Marketing'
 import Footer from '../Componentes/Footer'
+import {useAuth}  from '../Componentes/AuthContext';
 
-function Home({isLoggedIn}) {
+
+function Home() {
+  const { isLoggedIn } = useAuth;
+
 
   return (
     <>

@@ -3,9 +3,12 @@ import {BeatLoader} from 'react-spinners'
 import Swal from 'sweetalert2'
 import logoSN from '../assets/logosaludnet.png'
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../Componentes/AuthContext';
 
 
-function Login({ handleLogin }) {
+function Login({isLoggedIn}) {
+  const { handleLogin } = useAuth();
+
   const navigate = useNavigate();
   const urlBase = "https://647a6c2ad2e5b6101db05795.mockapi.io/API1/medicos";
 
@@ -71,7 +74,7 @@ function Login({ handleLogin }) {
         // icon: "sucess",
 
       })
-      handleLogin();
+      handleLogin(enteredUsername);
       navigate('/');
 
       setIngresar(true);
@@ -100,7 +103,7 @@ function Login({ handleLogin }) {
           <label htmlFor="nombre"><strong>Usuario</strong></label>
 
           <input  type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" style={{ display: 'block' }} />
-
+          
           <label htmlFor="password"><strong>Contraseña</strong></label>
           <input type="password" name="password" id="password" placeholder="Introduzca su contraseña" style={{ display: 'block' }} />
 
@@ -108,7 +111,7 @@ function Login({ handleLogin }) {
 
           <button id="enviarLogin" type="submit">Enviar</button>
         </form>
-        {ingresar && <Menu name={loginUser.name} />}
+        {isLoggedIn && ingresar && <Menu name={loginUser.name} />}
       </div>
     </>
   );
