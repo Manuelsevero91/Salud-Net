@@ -1,9 +1,15 @@
----
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>read me</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
 
----
-
-<h2 id="sitio-web-de-consultorios-médicos-para-la-comunidad-de-benito-juárez">Sitio web de Consultorios Médicos para la comunidad de Benito Juárez</h2>
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="sitio-web-de-consultorios-médicos-para-la-comunidad-de-benito-juárez">Sitio web de Consultorios Médicos para la comunidad de Benito Juárez</h2>
 <p>Integrantes: Marina Erasun, Ignacio Molina, Manuel Severo y Karina D’Esposito.</p>
 <p><strong>La finalidad de nuestro proyecto es proveer a un grupo de médicos de una solución on line para la gestión de turnos. En las siguientes etapas se prevee la incorporación de historia clínica de pacientes, gestión de obras sociales y soluciones para el manejo contable del negocio.</strong></p>
 <p>Tecnologías utilizadas:</p>
@@ -29,4 +35,7 @@
 El sitio tiene contenido informativo para la población en general, pudiendo navegar por la página y utilizar el  botón de contacto para enviar consultas.<br>
 Los usuarios registrados pueden acceder a la base de datos a través del botón de Nuestros Profesionales para editar, eliminar, agregar o consultar.<br>
 Quienes estén validados estarán habilitados a administrar la base de datos.</p>
+</div>
+</body>
 
+</html>
