@@ -11,7 +11,7 @@ const UserProvider = ({ children }) => {
     const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
     const storedUsername = localStorage.getItem('username');
 
-    if (storedIsLoggedIn === 'true'  && storedUsername) {
+    if (storedIsLoggedIn === 'true' && storedUsername) {
       setIsLoggedIn(true);
       setUsername(storedUsername);
     }
@@ -33,7 +33,7 @@ const UserProvider = ({ children }) => {
 
 
   return (
-    <UserContext.Provider value={{ isLoggedIn,username, handleLogin, handleLogout }}>
+    <UserContext.Provider value={{ isLoggedIn, username, handleLogin, handleLogout }}>
       {children}
     </UserContext.Provider>
   );

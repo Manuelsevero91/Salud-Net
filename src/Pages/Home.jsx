@@ -1,6 +1,6 @@
 import Marketing from '../Componentes/Marketing'
 import Footer from '../Componentes/Footer'
-import {useAuth}  from '../Componentes/UserContext';
+import { useAuth } from '../Componentes/UserContext';
 
 
 function Home() {
@@ -9,15 +9,15 @@ function Home() {
 
   return (
     <>
-     <div className= 'inicio'>
-    <section className = "container">
-        {!isLoggedIn && <h1>Bienvenidos a Salud Net</h1>}
-    </section>
-    
-    <div className="nosotros">
-    <h2><strong>Sobre Nosotros</strong></h2>
-    <p className="spaced-paragraph">
-            "SaludNet nació en el 2016 como iniciativa de un conjunto de profesionales
+      <div className='inicio'>
+        <section className="container">
+          {!isLoggedIn && <h1>Bienvenidos a Salud Net</h1>}
+        </section>
+
+        <div className="nosotros">
+          <h2><strong>Sobre Nosotros</strong></h2>
+          <p className="spaced-paragraph">
+            "Salud Net nació en el 2016 como iniciativa de un conjunto de profesionales
             con la misión de mejorar la salud en las personas.
             Nuestro propósito es ofrecer una calidad de atención eficaz  al
             servicios de atención de la salud basados en la evidencia;
@@ -29,10 +29,10 @@ function Home() {
             para una población con una creciente expectativa de vida."
           </p>
 
-  </div>
-  <Marketing />
-  <Footer/>
-  </div>
+        </div>
+        <Marketing />
+        <Footer />
+      </div>
     </>
   );
 };

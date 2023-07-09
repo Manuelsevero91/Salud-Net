@@ -17,10 +17,10 @@ function Contacto() {
   };
 
   return (
-    <div>   
+    <div>
       {showContactForm && <Form onSubmit={handleSubmit} />}
     </div>
-   
+
   );
 }
 

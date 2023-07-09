@@ -28,12 +28,27 @@
 }
 
 #btnSubContact {
-  background-position: center;
+   background-position: center;
   padding: 10px;
   border-radius: 6px;
   margin-top: 20px;
   color: white;
 }
+button {
+  border: none;
+  padding: auto;
+  font-size: 1.4em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgb(44, 99, 103);
+  cursor: pointer;
+  margin-top: 5px;
+}
+button:hover {
+  color: #efeee9;
+  transform: scale(1.2);
+
+} 
 .close-button {
   position: absolute;
   margin-top: 0;

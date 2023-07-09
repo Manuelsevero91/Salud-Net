@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {BeatLoader} from 'react-spinners'
+import { BeatLoader } from 'react-spinners'
 import Swal from 'sweetalert2'
 import logoSN from '../assets/logosaludnet.png'
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { useAuth } from '../Componentes/UserContext';
 
 
 
-function Login({isLoggedIn}) {
+function Login({ isLoggedIn }) {
   const { handleLogin } = useAuth();
 
   const navigate = useNavigate();
@@ -34,14 +34,17 @@ function Login({isLoggedIn}) {
   }, []);
 
   if (!users.length && !error) return (
-  <BeatLoader style={{ position:' fixed', top: '50%', left:' 50%',
-    transform: 'translate(-50%, -50%)' }} /> 
+    <BeatLoader style={{
+      position: ' fixed', top: '50%', left: ' 50%',
+      transform: 'translate(-50%, -50%)'
+    }} />
   )
   if (error) {
     return (
-    <div className='error-container'>
-      <img src= {error404Image} alt= "Error 404"/> 
-      </div>)}
+      <div className='error-container'>
+        <img src={error404Image} alt="Error 404" />
+      </div>)
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -99,8 +102,8 @@ function Login({isLoggedIn}) {
           <h3 id="inicioSesion"><strong>Iniciar Sesión</strong></h3>
           <label htmlFor="nombre"><strong>Usuario</strong></label>
 
-          <input  type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" style={{ display: 'block' }} />
-          
+          <input type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" style={{ display: 'block' }} />
+
           <label htmlFor="password"><strong>Contraseña</strong></label>
           <input type="password" name="password" id="password" placeholder="Introduzca su contraseña" style={{ display: 'block' }} />
 

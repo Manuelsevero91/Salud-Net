@@ -29,14 +29,14 @@ const Formulario = () => {
   };
   const handleClose = () => {
     setCerrado(true)
-  
+
   };
 
   if (cerrado) {
     return (
       <div className="form-overlay">
         <div className="form-container">
-      </div>
+        </div>
       </div>
     )
   };
@@ -56,7 +56,7 @@ const Formulario = () => {
     <div className="form-overlay">
       <div className="form-container">
         <form onSubmit={handleSubmit}>
-        <button onClick={handleClose} className="close-button">Cerrar</button>
+          <button onClick={handleClose} className="close-button">Cerrar</button>
           <div>
             <label htmlFor="nombre">Nombre y Apellido</label>
             <input
