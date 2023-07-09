@@ -1,5 +1,4 @@
-import React from "react";
-
+import {Link} from 'react-router-dom'
 
 const ImageParagraph = ({ imageSrc, title, paragraph }) => {
   return (
@@ -28,7 +27,11 @@ const Marketing = () => {
 
       />
       <ImageParagraph
-        title="Epecialidades"
+        title={
+          <Link to="/especialidades" className="btn-especialidades">
+            Ver Especialidades
+          </Link>
+        }
         paragraph="En nuestros consultorios, contamos con tecnología de vanguardia para brindarte diagnósticos precisos y tratamientos efectivos. Nuestros equipos médicos están equipados con las últimas herramientas y dispositivos médicos para asegurar la calidad y eficiencia en cada consulta. Además, mantenemos nuestros consultorios actualizados con los avances tecnológicos más recientes para ofrecerte la mejor atención médica."
         imageSrc="https://bancosdeimagenes.com/wp-content/uploads/2019/03/Getty-Medical-Category-768x443-1.jpg"
       />

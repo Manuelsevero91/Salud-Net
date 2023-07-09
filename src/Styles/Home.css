@@ -30,6 +30,16 @@ h1 {
   padding: 2%;
   color: rgb(46, 46, 46);
 }
+.btn-especialidades {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(44, 99, 103);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
 h2 {
   font-size: 400;
   font-weight: lighter;

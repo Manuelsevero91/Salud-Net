@@ -9,7 +9,6 @@
   z-index: 9999;
   font-family: sans-serif;
 }
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -19,17 +18,13 @@
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 999;
 }
-
 #userLabel {
   display: block;
   margin-bottom: 15px;
   margin-top: 10px;
   color: white;
   justify-content: center;
-      
-
 }
-
 table {
   width: 100%;
   margin: 10px;
@@ -42,7 +37,6 @@ table {
   color: white;
   font-family: sans-serif;
 }
-
 th {
   background-color: rgb(44, 99, 103);
   color: white;
@@ -52,7 +46,6 @@ th {
   font-size: larger;
   text-align: center;
 }
-
 td {
   padding: 15px;
   text-align: left;
@@ -61,7 +54,6 @@ td {
   font-size: larger ;
   text-align: center;
 }
-
 .controles {
   padding: 5px 10px;
   background-color:rgb(44, 99, 103);
@@ -73,19 +65,17 @@ td {
   border-radius: 10px;
   margin-left: 10px;
 }
-
 .controles:hover {
-  background-color: rgb(255, 255, 255); 
-  color: rgb(44, 99, 250); 
-  border: 1px solid rgb(44, 99, 250); 
+  background-color: rgb(255, 255, 255);
+  color: rgb(44, 99, 250);
+  border: 1px solid rgb(44, 99, 250);
 }
-
 .titular{
   display:flex;
   flex-direction:column;
   justify-content: center;
-  height: 200px;  
-  margin-top: 50px; 
+  height: 200px;
+  margin-top: 50px;
   margin-bottom: -50px;
 }
 .titulo{
@@ -95,26 +85,30 @@ td {
   text-align: center;
   font-weight: bold;
 }
-
 .selector{
-  padding: 5px 10px;    
+  display:inline-block;
+  flex-direction:column ;
+  padding: 5px 10px;
   border-color:rgb(44, 99, 250);
   color: rgb(44, 99, 150);
   cursor: pointer;
-  width: 250px;  
-  border-radius: 10px; 
-  margin-right: 10px;
-  margin-left: 10px;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
 }
-
 .selector:hover {
-  color: rgb(44, 99, 250); 
-  border: 1px solid rgb(44, 99, 250); 
+  color: rgb(44, 99, 250);
+  border: 1px solid rgb(44, 99, 250);
 }
-
-.opcion{
-  border-radius: 10px; 
+input.selector{
+  height: 30px;
+}
+div.opcion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .opcion{
-  border-radius: 10px; 
+  border-radius: 10px;
+  height: 100px;
 }

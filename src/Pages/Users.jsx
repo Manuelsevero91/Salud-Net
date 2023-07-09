@@ -182,7 +182,7 @@ function Profesionales() {
 
   function handleOrdenarColumna(columna) {
     if (columnaOrden === columna) {
-      //si la columna de orden es la isma, cambia la direccion
+      //si la columna de orden es la misma, cambia la direccion
       setDireccionOrden(direccionOrden === 'ascendente' ? 'descendente' : 'ascendente');
     } else {
       // Si la columna de orden es diferente, establece la nueva columna y la dirección ascendente
@@ -256,10 +256,7 @@ function Profesionales() {
               {columnaOrden === 'Especialidad' && (
                 direccionOrden === 'ascendente' ? '▲' : '▼'
               )}</th>
-            {/* <th>ID</th>
-            <th>Nombre</th>
-            <th>Especialidad</th> */}
-            <th>Matricula</th>
+                <th>Matricula</th>
             <th>Controles</th>
           </tr>
         </thead>

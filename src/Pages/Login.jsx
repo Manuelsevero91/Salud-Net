@@ -4,8 +4,7 @@ import Swal from 'sweetalert2'
 import logoSN from '../assets/logosaludnet.png'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Componentes/UserContext';
-
-
+import NotFoundImage from '../assets/not-found.jpg';
 
 function Login({ isLoggedIn }) {
   const { handleLogin } = useAuth();
@@ -42,7 +41,7 @@ function Login({ isLoggedIn }) {
   if (error) {
     return (
       <div className='error-container'>
-        <img src={error404Image} alt="Error 404" />
+        <img src={NotFoundImage} alt="Error 404" />
       </div>)
   }
 
@@ -50,7 +49,8 @@ function Login({ isLoggedIn }) {
     e.preventDefault();
 
     const enteredUsername = e.target.nombre.value;
-    const userExists = users.some(user => user.Name === enteredUsername); // corrobora si existe el nombre (some)
+     // verifica si existe el nombre
+    const userExists = users.some(user => user.Name === enteredUsername);
 
     if (!userExists) {
       Swal.fire({
@@ -80,7 +80,7 @@ function Login({ isLoggedIn }) {
 
       setIngresar(true);
       setLoginUser(userFound);
-      notificacionRef.current.style.display = "none"; // si es correcto se oculta y deja que se visualice Menu
+      notificacionRef.current.style.display = "none";
     } else {
       setIngresar(false);
       setLoginUser(null);

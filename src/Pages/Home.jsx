@@ -1,6 +1,7 @@
 import Marketing from '../Componentes/Marketing'
 import Footer from '../Componentes/Footer'
 import { useAuth } from '../Componentes/UserContext';
+import {Link} from 'react-router-dom'
 
 
 function Home() {
@@ -28,8 +29,9 @@ function Home() {
             que se base en la prevención de enfermedades y en la promoción de hábitos saludables
             para una población con una creciente expectativa de vida."
           </p>
-
+         
         </div>
+       
         <Marketing />
         <Footer />
       </div>

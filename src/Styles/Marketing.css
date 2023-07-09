@@ -41,5 +41,13 @@
     font-size: 16px;
     line-height: 1.5;
   }
-  
+  #especialistas{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 5px solid white;
+    color: black;
+    font-size: larger ;
+    text-align: center;
+    background-color:rgb(44, 99, 103, 0.2);
+    }
   

@@ -53,7 +53,7 @@ function Prof() {
           <p className="titulo">PROFESIONALES DE SALUDNET </p>
         </div>
         <div className='opcion'>
-          <p>Seleccione si desea buscar por nombre o especialidad</p>
+          <p id="option"><strong>Seleccione si desea buscar por nombre o especialidad</strong></p>
           <select value={searchBy} onChange={handleSearchBy} className="selector">
             <option value="nombre">Nombre</option>
             <option value="especialidad">Especialidad</option>
@@ -70,7 +70,7 @@ function Prof() {
       <ul ref={tablaRef} className="list">
         {usuarioFiltrado.map((user, index) => (
           <li key={index}>
-            <p>{user.Name}: <strong>{user.Especialidad}</strong></p>
+            <p id= "especialistas">{user.Name}: <strong>{user.Especialidad}</strong></p>
           </li>
         ))}
       </ul>
