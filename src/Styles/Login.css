@@ -1,0 +1,82 @@
+div.login {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: url("../assets/Consultorio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+ input {
+  width: 100%;
+  height: 40px;
+}
+label {  
+
+  color: rgb(33, 36, 36);
+  font-size: 22px;
+
+  }
+
+#inicioSesion {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: rgb(44, 99, 103);
+  margin-top: 20px;
+}
+
+#enviarLogin {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+#enviarLogin:hover {
+  border-color: #646cff;
+}
+#enviarLogin:focus,
+#enviarLogin:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+#enviarLogin {
+  background-color: rgb(44, 99, 103);
+  color: white;
+  font-weight: bold;
+}
+#error {
+  margin-bottom: 50px;
+}
+#password {
+  margin-bottom: 50px;
+}
+#nombre {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.error-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+input:focus {
+  background:linear-gradient(to right, white, lightblue 50%, #646CFF);
+  border: 2px solid red;
+}

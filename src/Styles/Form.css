@@ -1,0 +1,70 @@
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../assets/Consultorio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+#consulta {
+  width: 100%;
+  height: 150px;
+ 
+}
+
+.form-container {
+  position: relative;
+  margin-top: 150px;
+  font-weight: bold;
+  width: 500px;
+  height: 500px;
+}
+
+#btnSubContact {
+   background-position: center;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 20px;
+  color: white;
+}
+button {
+  border: none;
+  padding: auto;
+  font-size: 1.4em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgb(44, 99, 103);
+  cursor: pointer;
+  margin-top: 5px;
+}
+button:hover {
+  color: #efeee9;
+  transform: scale(1.2);
+
+} 
+.close-button {
+  position: absolute;
+  margin-top: 0;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(23, 60, 62);
+  font-weight: bold;
+}
+#FormSucces{
+  background-color: whitesmoke ;
+  color: rgb(44, 99, 103);
+  align-self: center;
+  margin-top: 100px;
+  padding:20px 80px;
+  align-content: center;
+  border: solid rgb(44, 99, 103) 2px;
+}

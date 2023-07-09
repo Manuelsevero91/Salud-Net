@@ -1,0 +1,53 @@
+.marketing-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    height:100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(44, 99, 103);
+  }
+  
+  .image-paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height:50%;
+    padding: 20px;
+    background-color: white;
+    margin-top: 45px;
+  }
+  
+  .image-paragraph img {
+    width:500px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .image-paragraph .content {
+    width: calc(100% - 220px);
+    padding: 0 20px;
+  }
+  
+  .image-paragraph h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .image-paragraph p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  #especialistas{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 5px solid white;
+    color: black;
+    font-size: larger ;
+    text-align: center;
+    background-color:rgb(44, 99, 103, 0.2);
+    }
+  

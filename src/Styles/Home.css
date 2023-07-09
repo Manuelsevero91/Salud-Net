@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(44, 99, 103);
+  height: 600px;
+  width: 100%;
+  background-image: url("https://media.istockphoto.com/id/1414924646/es/foto/diagn%C3%B3stico-cardi%C3%B3logo-paciente-resultado-de-la-prueba-card%C3%ADaca-y-anatom%C3%ADa-humana-con-base-de.jpg?s=612x612&w=0&k=20&c=64vyySN4i78FlRLLHw2caNnRf4NPQghskUvMdHdJpNM=");
+  background-size: cover;
+  background-position: cover;
+}
+
+h1 {
+  position: relative;
+  top: 50%;
+  left: 15%;
+  right: 25%;
+  font-size: 80px;
+  color: rgb(245, 249, 249);
+}
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:15rem;
+  margin-top: 10px;
+  position: static;
+  background-color: white;
+  text-align: center;
+  padding: 2%;
+  color: rgb(46, 46, 46);
+}
+.btn-especialidades {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(44, 99, 103);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 400;
+  font-weight: lighter;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.spaced-paragraph {
+  line-height: 1.7;
+  font-size: 1.02em;
+}

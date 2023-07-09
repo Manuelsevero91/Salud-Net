@@ -1,0 +1,22 @@
+.footer {
+    background-color:  rgb(44, 99, 103);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-icons {
+    display: flex;
+  }
+  
+  .social-icon {
+    margin-right: 20px;
+    color: white;
+    font-size: 30px;
+  }
+  
+  .footer-text {
+    color: white;
+    font-weight:500;
+  }
+  
