@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Componentes/UserContext';
 import NotFoundImage from '../assets/not-found.jpg';
 
+
 function Login({ isLoggedIn }) {
   const { handleLogin } = useAuth();
 

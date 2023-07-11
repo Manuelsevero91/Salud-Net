@@ -1,7 +1,6 @@
 import Marketing from '../Componentes/Marketing'
 import Footer from '../Componentes/Footer'
 import { useAuth } from '../Componentes/UserContext';
-import {Link} from 'react-router-dom'
 
 
 function Home() {
