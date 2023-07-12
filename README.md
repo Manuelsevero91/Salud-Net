@@ -7,25 +7,28 @@
 <p>Integrantes: Marina Erasun, Ignacio Molina, Manuel Severo y Karina D’Esposito.</p>
 <p><strong>La finalidad de nuestro proyecto es proveer a un grupo de médicos de una solución on line para la gestión de turnos. En las siguientes etapas se prevee la incorporación de historia clínica de pacientes, gestión de obras sociales y soluciones para el manejo contable del negocio.</strong></p>
 <p>Tecnologías utilizadas:</p>
+<p>Nodejs<br>
+Entorno e desarrollo: VSC<br>
+npm install - <a href="https://code.visualstudio.com/"> https://code.visualstudio.com </a><br>
+Control de versiones: gitHub<br>
+npm install - <a href="https://github.com/"> https://github.com/ </a></p>
+<p>Inicio:<br>
+Plantilla de React: Vite<br>
+npm init vite@latest – --template react</p>
 <ul>
-<li><a href="https://trello.com/w/saludnet"> https://trello.com/w/saludnet </a> - <a href="https://code.visualstudio.com/"> https://code.visualstudio.com </a> - <a href="https://github.com/"> https://github.com/ </a></li>
+<li><a href="https://vitejs.dev/"> https://vitejs.dev/ </a><br>
+npm i <a href="reaccionar-dom"> react-dom </a></li>
 </ul>
-<p>Se utilizó Visual Studio Code como entorno de desarrollo, GitHub para el control de versiones y Trello para la evolución del proyecto donde se plantearon las pautas iniciales y se gestionaron los sucesivos cambios que la aplicación necesitó.</p>
-<p>Inicialmente en VSC se instaló</p>
-<ul>
-<li><a href="https://vitejs.dev/">https://vitejs.dev/</a></li>
-<li><a href="react-dom">react-dom</a></li>
-</ul>
-<p>Durante el desarrollo se sumaron las dependencias<br>
-<a href="@fortawesome/free-brands-svg-icons">@fortawesome/free-brands-svg-icons</a><br>
-<a href="@fortawesome/react-fontawesome">@fortawesome/react-fontawesome</a><br>
-<a href="react-router-dom">react-router-dom</a><br>
-<a href="sweetalert2">sweetalert2</a><br>
-<a href="react-spinners">react-spinners</a><br>
-<a href="https://mockapi.io/projects">https://mockapi.io/projects</a></p>
-<p>Instrucciones de ejecución:</p>
-<p>Se utilizó npm tanto para instalar las dependencias (comando npm install) como para ejecutar el proyecto. (comando npm run dev)</p>
-<p>Uso del proyecto:<br>
+<p>Dependencias sumadas:<br>
+npm i <a href="@fortawesome/free-brands-svg-icons">@fortawesome/free-brands-svg-icons </a><br>
+npm i <a href="@fortawesome/react-fontawesome"> @fortawesome/react-fontawesome </a><br>
+npm i <a href="react-router-dom"> react- router-dom </a><br>
+npm i <a href="sweetalert2"> sweetalert2 </a><br>
+npm i <a href="react-spinners"> react-spinners </a><br>
+npm i <a href="https://mockapi.io/projects"> https://mockapi.io/projects </a></p>
+<p>Ejecución<br>
+comando npm run dev<br>
+Uso del proyecto:<br>
 El sitio tiene contenido informativo para la población en general, pudiendo navegar por la página y utilizar el  botón de contacto para enviar consultas.<br>
 Los usuarios registrados pueden acceder a la base de datos a través del botón de Nuestros Profesionales para editar, eliminar, agregar o consultar.<br>
 Quienes estén validados estarán habilitados a administrar la base de datos.</p>
