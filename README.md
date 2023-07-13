@@ -11,7 +11,7 @@
 Entorno e desarrollo: VSC<br>
  <a href="https://code.visualstudio.com/"> https://code.visualstudio.com </a><br>
 Control de versiones: gitHub<br>
-npm install - <a href="https://github.com/"> https://github.com/ </a></p>
+<a href="https://github.com/"> https://github.com/ </a></p>
 <p>Inicio:<br>
 Plantilla de React: Vite<br>
 npm init vite@latest – --template react</p>
