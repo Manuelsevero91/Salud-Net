@@ -83,13 +83,6 @@ function Profesionales() {
     }
   }
 
-
-
-
-
-
-
-
   //funcion para agregar un nuevo profesional
   function handleAddProf(e) {
     e.preventDefault();
