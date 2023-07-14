@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Swal from 'sweetalert2';
 import logosaludnet from "../assets/logosaludnet.png";
 
+
 function Profesionales() {
   const tablaRef = useRef(null);
   const [users, setUsers] = useState([]);
@@ -27,9 +28,7 @@ function Profesionales() {
       .catch(error => console.log(error));
   }, []);
 
-
   function saveProfesional(newProfesional) {
-    //chequea si existe el id, si existe lo edita
     if (editData.id) {
       fetch(baseUrl + `/${editData.id}`, {
         method: "PUT",
@@ -44,24 +43,53 @@ function Profesionales() {
           setUsers(updatedUsers);
           setEditData({});
           setShowModal(false);
+          localStorage.setItem('users', JSON.stringify(updatedUsers));
         })
         .catch(err => console.error(err));
-
-      //si no existe lo crea
     } else {
-      fetch(baseUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newProfesional),
-      })
+      // Verificar duplicados mediante solicitud GET a la API
+      fetch(`${baseUrl}?Name=${newProfesional.Name}&Especialidad=${newProfesional.Especialidad}&Matricula=${newProfesional.Matricula}`)
         .then(res => res.json())
         .then(data => {
-          setUsers([...users, data]);
-          setShowModal(false);
+          if (data.length > 0) {
+            closeModal();
+            Swal.fire({
+              icon: 'error',
+              title: 'Profesional duplicado',
+              text: 'El profesional ya existe en la lista.',
+            }).then(() => {
+              // closeModal(); 
+            });
+          } else {
+            // No hay duplicados, realizar la solicitud POST
+            fetch(baseUrl, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(newProfesional),
+            })
+              .then(res => res.json())
+              .then(data => {
+                setUsers([...users, data]);
+                closeModal(); // Cierra el modal
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Profesional agregado',
+                  text: 'El profesional ha sido agregado exitosamente.',
+                });
+              })
+              .catch(err => console.error(err));
+          }
         })
         .catch(err => console.error(err));
     }
   }
+
+
+
+
+
+
+
 
   //funcion para agregar un nuevo profesional
   function handleAddProf(e) {

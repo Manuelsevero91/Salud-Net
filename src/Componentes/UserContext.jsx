@@ -4,24 +4,23 @@ const UserContext = createContext();
 const useAuth = () => useContext(UserContext);
 
 const UserProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [username, setUsername] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
+    return storedIsLoggedIn === 'true';
+  });
+
+  const [username, setUsername] = useState(() => {
+    return localStorage.getItem('username') || '';
+  });
 
   useEffect(() => {
-    const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
-    const storedUsername = localStorage.getItem('username');
-
-    if (storedIsLoggedIn === 'true' && storedUsername) {
-      setIsLoggedIn(true);
-      setUsername(storedUsername);
-    }
-  }, []);
+    localStorage.setItem('isLoggedIn', isLoggedIn);
+    localStorage.setItem('username', username);
+  }, [isLoggedIn, username]);
 
   const handleLogin = (username) => {
     setIsLoggedIn(true);
     setUsername(username);
-    localStorage.setItem('isLoggedIn', 'true');
-    localStorage.setItem('username', username);
   };
 
   const handleLogout = () => {
@@ -31,7 +30,6 @@ const UserProvider = ({ children }) => {
     localStorage.removeItem('username');
   };
 
-
   return (
     <UserContext.Provider value={{ isLoggedIn, username, handleLogin, handleLogout }}>
       {children}
@@ -40,3 +38,4 @@ const UserProvider = ({ children }) => {
 };
 
 export { UserContext, UserProvider, useAuth };
+
