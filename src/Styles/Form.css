@@ -68,3 +68,10 @@ button:hover {
   align-content: center;
   border: solid rgb(44, 99, 103) 2px;
 }
+.error-label {
+  
+  color: brown;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+}
