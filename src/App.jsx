@@ -31,7 +31,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/especialidades" element={<Lista/>} />
           <Route element={<ProtectedRoute />}>
-            <Route path="/profesionales" element={<Users />} />
+            <Route exact path="/profesionales" element={<Users />} />
           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>

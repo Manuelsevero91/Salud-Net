@@ -256,7 +256,7 @@ function Profesionales() {
               {columnaOrden === 'Especialidad' && (
                 direccionOrden === 'ascendente' ? '▲' : '▼'
               )}</th>
-                <th>Matricula</th>
+            <th>Matricula</th>
             <th>Controles</th>
           </tr>
         </thead>
@@ -278,7 +278,7 @@ function Profesionales() {
       {showModal && (
         <form onSubmit={handleAddProf} className="modal">
           <label id="userLabel">Id
-            <input type="text" name="id" value={editData.id} readOnly />
+            <input type="text" name="Id" value={editData.id} readOnly />
           </label>
           <label id="userLabel">Name:
             <input type="text" name="Name" value={editData.Name} onChange={handleChange} />
@@ -301,7 +301,3 @@ function Profesionales() {
 }
 
 export default Profesionales;
-
-
-
-
