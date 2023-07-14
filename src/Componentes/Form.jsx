@@ -8,6 +8,7 @@ const Formulario = () => {
   const [cerrado, setCerrado] = useState(false);
   const [errores, setErrores] = useState({});
 
+
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
   };
@@ -63,6 +64,7 @@ const Formulario = () => {
 
   };
 
+
   if (cerrado) {
     return (
       <div className="form-overlay">
@@ -109,7 +111,7 @@ const Formulario = () => {
             <input type="text"
               id="consulta"
               value={consulta}
-              onChange={handleConsultaChange} />
+              onChange={handleConsultaChange}/>
             {errores.consulta && <span className="error-label">{errores.consulta}</span>}
           </div>
           <button id="btnSubContact" type="submit">Enviar</button>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Form from "./Form";
+import Form from "../Componentes/Form";
 
 function Contacto() {
   const location = useLocation();
