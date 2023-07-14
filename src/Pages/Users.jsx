@@ -58,7 +58,6 @@ function Profesionales() {
               title: 'Profesional duplicado',
               text: 'El profesional ya existe en la lista.',
             }).then(() => {
-              // closeModal(); 
             });
           } else {
             // No hay duplicados, realizar la solicitud POST
